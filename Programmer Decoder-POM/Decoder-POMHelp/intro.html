@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title> Decoder-POM Help intro</title>
+  <meta name="AppleTitle" content="Decoder-POM Help" />
+  <meta name="AppleIcon" content="Decoder-POM Help/../../Icon.icns" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="noindex" />
+  <style type="text/css">
+    h1 {font: 21.0px Lucida Grande; margin:  0.0px 0.0px 18.0px 0.0px; font-weight: bold; color: rgb(102, 153, 204)}
+    h2 {font: 19.0px Lucida Grande; margin: 18.0px 0.0px  6.0px 0.0px; font-weight: bold; color: rgb(102, 153, 204)}
+    p  {font: 15.0px Lucida Grande; margin:  0.0px 0.0px  6.0px 6.0px;}
+    li {font: 15.0px Lucida Grande; margin:  0.0px 0.0px  0.0px 0.0px;}
+    ul {font: 15.0px Lucida Grande; margin:  0.0px 0.0px  0.0px 0.0px; list-style-type: disc}
+    </style>
+</head>
+
+<body>
+<h1>Basic operation</h1>
+
+<p>This program allows reading and modifying the CV variables within the switch, servo, relays and other kind of decoder derived from Opendecoder22 (except for the feedback decoder, which should be programmed via a dedicated program). For this purpose it uses Programming on the Main (PoM) messages. Since the XPressNet specification only supports PoM messages for train decoders (as opposed to accessory / feedback decoders),  decoders listen to a train address equal to the <a href="addresses.html">decoder address</a> + 7000.</p>
+  
+<p>To set a CV to a certain value, a standard CV-Write message is transmitted.</p>
+  
+<p>To read a CV value, a standard CV-Verify message is transmitted. Note however that the CV value contained in that message will always be 0. Upon reception of this  message, the decoder reacts in a non-standard way, by sending the value of the CV back via RS-Bus feedback messages (two messages for each byte).</p>
+
+</body>
+
+</html>

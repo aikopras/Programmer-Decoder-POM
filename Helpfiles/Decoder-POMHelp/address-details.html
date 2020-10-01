@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title> Decoder Programming Help - Addresses</title>
+    <meta name="AppleTitle" content="Decoder-POM Help" />
+    <meta name="AppleIcon" content="Decoder-POM Help/../../Icon.icns" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="noindex" />
+    <style type="text/css">
+      h1 {font: 21.0px Lucida Grande; margin:  0.0px 0.0px 18.0px 0.0px; font-weight: bold; color: rgb(102, 153, 204)}
+      h2 {font: 19.0px Lucida Grande; margin: 18.0px 0.0px  6.0px 0.0px; font-weight: bold; color: rgb(102, 153, 204)}
+      p  {font: 15.0px Lucida Grande; margin:  0.0px 0.0px  6.0px 6.0px;}
+      li {font: 15.0px Lucida Grande; margin:  0.0px 0.0px  0.0px 0.0px;}
+      ul {font: 15.0px Lucida Grande; margin:  0.0px 0.0px  0.0px 0.0px; list-style-type: disc}
+      </style>
+  </head>
+  
+  <body>
+    <h1>Details regarding Decoder Addresses</h1>
+    
+    
+    <h2>Decoder address as used by this programs</h2>
+    <ul>
+      <li> This program uses an integer for the <b>decoder address</b>.</li>
+      <li> The range of this address is 0..255.</li>
+    </ul>
+    
+    
+    <h2>Decoder address as used by XPressnet</h2>
+    <ul>
+      <li> The Lenz Xpressnet specification uses 1 byte for the decoder address.</li>
+      <li> The range of an Xpressnet address range is  0..255.</li>
+      <li> <b>Xpressnet address = decoder address</b>.</li>
+    </ul>
+
+    
+    <h2>Addresses within DCC packets</h2>
+    <ul>
+      <li> Within DCC packets address bits are divided over two bytes: the first address byte contains the low-order 6 bits, the second address byte contains the high order 3 bits (in Lenz environment only 2 bits)
+      <li> It seems that different manufacturers use different conventions to code the first decoder address within DCC packets.</li>
+      <ol>
+        <li>Most Command Stations, including the Roco 10764, start with 0 (thus <b>DCC address = Xpressnet address</b>).</li>
+        <li>The Lenz LZV100 starts with 1 (thus <b>DCC address = Xpressnet address + 1</b>).</li>
+      </ol>
+      <li> The Lenz LZV100 behaves strange if the address is exactly 0, 64, 128 or 192. In such cases, the address seems to be 64 too low. </i>
+      <li> According to the NMRA specifications, decoder addresses could range till 511 (basic accessory decoders). In case of NMRA:</li>
+      <UL>
+        <li> Decoder address 0 should be reserved.</li>
+        <li> Decoder address 511 represents the broadcast address (basic accessory decoders) and 2047 (extended accessory decoders).</li>
+      </UL>
+      <li> Note that Xpressnet systems are unable to use the entire address range that is allowed according to the NMRA specs.</li>
+    </ul>
+
+    
+    <h2>Decoder address as used by the OPENDECODER 2.2 hardware</h2>
+    <ul>
+      <li> OPENDECODER 2.2 decoders use an integer (16 bit) for the "decoder" address (My_Dec_Addr).</li>
+      <li> The range of My_Dec_Addr is 0..255 (as a consequence of using Xpressnet).</li>
+      <li> To compensate for the fact that different manufacturers code the low-order address byte within DCC packets differently, the OPENDECODER 2.2 decoders include a special <i>CmdStation</i> CV. Usage of this compensation may be required in cases where the decoder uses more than one (consecutive) address (for example when <i>SkipEven</i> is true, to ensure consecutive RS-bus feedback addresses).</li>
+      <li> The mapping between the received address as used within the decoder software (ReceivedAddr) and the address contained within the DCC packet is as follows:</li>
+      <ol>
+        <li><b>RecDecAddr = decoder address</b> (if the <i>CmdStation</i> CV = 0)</li>
+        <li><b>RecDecAddr = decoder address -1</b> (if the <i>CmdStation</i> CV = 1, thus Lenz. In that case there is also compensation for the values  0, 64, 128 and 192)</li>
+      </ol>
+      <li> On the web there is some confusion regarding the exact relationship between the decoder address within the DCC decoder hardware and CV1 and CV9. The convention used by OPENDECODER 2.2 decoders is: <b>My_Dec_Addr = CV1+(CV9*64)</b>. This implies that the minimum value for CV1 is 0 (and not 1, as sometimes suggested on the web).</li>
+       <li> My_Dec_Addr will be MAXINT for decoders that have not been initialised.</li>
+    </ul>
+        
+        
+  </body>
+  
+</html>

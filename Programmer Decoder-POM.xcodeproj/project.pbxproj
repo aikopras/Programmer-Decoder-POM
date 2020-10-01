@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2416F9EF187B2376004A158B /* Decoder-POMHelp in Resources */ = {isa = PBXBuildFile; fileRef = 2416F9EE187B2376004A158B /* Decoder-POMHelp */; };
+		242243861531CF4200089699 /* TCPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2422437C1531CF4200089699 /* TCPConnection.m */; };
+		242243871531CF4200089699 /* DCCDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2422437E1531CF4200089699 /* DCCDecoder.m */; };
+		2422438A1531CF4200089699 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242243841531CF4200089699 /* PreferencesController.m */; };
+		2422438B1531CF4200089699 /* PreferencesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242243851531CF4200089699 /* PreferencesController.xib */; };
+		2454FB0F16F3AE9800B0AC6C /* CV-servo.html in Resources */ = {isa = PBXBuildFile; fileRef = 2454FB0E16F3AE9800B0AC6C /* CV-servo.html */; };
+		2454FB1116F3AEAA00B0AC6C /* CV-relays-4.html in Resources */ = {isa = PBXBuildFile; fileRef = 2454FB1016F3AEAA00B0AC6C /* CV-relays-4.html */; };
+		2454FB1316F3AEB400B0AC6C /* CV-relays-16.html in Resources */ = {isa = PBXBuildFile; fileRef = 2454FB1216F3AEB400B0AC6C /* CV-relays-16.html */; };
+		2454FB1516F3AEC300B0AC6C /* CV-safety.html in Resources */ = {isa = PBXBuildFile; fileRef = 2454FB1416F3AEC300B0AC6C /* CV-safety.html */; };
+		24553AAA16F123CA00EBFFD1 /* PoM-Decoder-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 24553AA716F123CA00EBFFD1 /* PoM-Decoder-icon.icns */; };
+		24553AAB16F123CA00EBFFD1 /* PoM-Decoder-icon.key in Resources */ = {isa = PBXBuildFile; fileRef = 24553AA816F123CA00EBFFD1 /* PoM-Decoder-icon.key */; };
+		24553AAC16F123CA00EBFFD1 /* PoM-Decoder-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 24553AA916F123CA00EBFFD1 /* PoM-Decoder-icon.png */; };
+		246BA97516EBE588005AA872 /* intro.html in Resources */ = {isa = PBXBuildFile; fileRef = 246BA97416EBE588005AA872 /* intro.html */; };
+		246BA97716EBE67C005AA872 /* addresses.html in Resources */ = {isa = PBXBuildFile; fileRef = 246BA97616EBE67C005AA872 /* addresses.html */; };
+		246BA97B16EBEFAF005AA872 /* IP.html in Resources */ = {isa = PBXBuildFile; fileRef = 246BA97A16EBEFAF005AA872 /* IP.html */; };
+		2479A8261531CEBB00B93E37 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2479A8251531CEBB00B93E37 /* Cocoa.framework */; };
+		2479A8301531CEBB00B93E37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2479A82E1531CEBB00B93E37 /* InfoPlist.strings */; };
+		2479A8321531CEBB00B93E37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2479A8311531CEBB00B93E37 /* main.m */; };
+		2479A8361531CEBB00B93E37 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2479A8341531CEBB00B93E37 /* Credits.rtf */; };
+		2479A8391531CEBB00B93E37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2479A8381531CEBB00B93E37 /* AppDelegate.m */; };
+		2479A83C1531CEBB00B93E37 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2479A83A1531CEBB00B93E37 /* MainMenu.xib */; };
+		24DE352E16F656A7005C1FED /* address-details.html in Resources */ = {isa = PBXBuildFile; fileRef = 24DE352D16F656A7005C1FED /* address-details.html */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2416F9EE187B2376004A158B /* Decoder-POMHelp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Decoder-POMHelp"; sourceTree = "<group>"; };
+		2422437C1531CF4200089699 /* TCPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = TCPConnection.m; sourceTree = "<group>"; tabWidth = 4; };
+		2422437D1531CF4200089699 /* TCPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPConnection.h; sourceTree = "<group>"; };
+		2422437E1531CF4200089699 /* DCCDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = DCCDecoder.m; sourceTree = "<group>"; tabWidth = 2; };
+		2422437F1531CF4200089699 /* DCCDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCDecoder.h; sourceTree = "<group>"; };
+		242243831531CF4200089699 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
+		242243841531CF4200089699 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
+		242243851531CF4200089699 /* PreferencesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesController.xib; sourceTree = "<group>"; };
+		2454FB0E16F3AE9800B0AC6C /* CV-servo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "CV-servo.html"; sourceTree = "<group>"; };
+		2454FB1016F3AEAA00B0AC6C /* CV-relays-4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "CV-relays-4.html"; sourceTree = "<group>"; };
+		2454FB1216F3AEB400B0AC6C /* CV-relays-16.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "CV-relays-16.html"; sourceTree = "<group>"; };
+		2454FB1416F3AEC300B0AC6C /* CV-safety.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "CV-safety.html"; sourceTree = "<group>"; };
+		24553AA716F123CA00EBFFD1 /* PoM-Decoder-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "PoM-Decoder-icon.icns"; sourceTree = "<group>"; };
+		24553AA816F123CA00EBFFD1 /* PoM-Decoder-icon.key */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoM-Decoder-icon.key"; sourceTree = "<group>"; };
+		24553AA916F123CA00EBFFD1 /* PoM-Decoder-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PoM-Decoder-icon.png"; sourceTree = "<group>"; };
+		246BA96A16EBE389005AA872 /* CV-switch.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "CV-switch.html"; sourceTree = "<group>"; };
+		246BA96B16EBE389005AA872 /* help.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = help.css; sourceTree = "<group>"; };
+		246BA96C16EBE389005AA872 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		246BA96D16EBE389005AA872 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		246BA97416EBE588005AA872 /* intro.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = intro.html; sourceTree = "<group>"; };
+		246BA97616EBE67C005AA872 /* addresses.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = addresses.html; sourceTree = "<group>"; };
+		246BA97A16EBEFAF005AA872 /* IP.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = IP.html; sourceTree = "<group>"; };
+		2479A8211531CEBB00B93E37 /* Programmer Decoder-POM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Programmer Decoder-POM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2479A8251531CEBB00B93E37 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		2479A8281531CEBB00B93E37 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		2479A8291531CEBB00B93E37 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2479A82A1531CEBB00B93E37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2479A82D1531CEBB00B93E37 /* Programmer Decoder-POM-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Programmer Decoder-POM-Info.plist"; sourceTree = "<group>"; };
+		2479A82F1531CEBB00B93E37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2479A8311531CEBB00B93E37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2479A8331531CEBB00B93E37 /* Programmer Decoder-POM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Programmer Decoder-POM-Prefix.pch"; sourceTree = "<group>"; };
+		2479A8351531CEBB00B93E37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2479A8371531CEBB00B93E37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2479A8381531CEBB00B93E37 /* AppDelegate.m */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2479A83B1531CEBB00B93E37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		24DE352D16F656A7005C1FED /* address-details.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "address-details.html"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2479A81E1531CEBB00B93E37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2479A8261531CEBB00B93E37 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24086F3816EB98A500A00AD0 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				24553AA716F123CA00EBFFD1 /* PoM-Decoder-icon.icns */,
+				24553AA816F123CA00EBFFD1 /* PoM-Decoder-icon.key */,
+				24553AA916F123CA00EBFFD1 /* PoM-Decoder-icon.png */,
+			);
+			name = Graphics;
+			path = graphics;
+			sourceTree = "<group>";
+		};
+		246BA96816EBE389005AA872 /* Helpfiles */ = {
+			isa = PBXGroup;
+			children = (
+				246BA96D16EBE389005AA872 /* readme.txt */,
+				246BA96916EBE389005AA872 /* Decoder-POMHelp */,
+			);
+			path = Helpfiles;
+			sourceTree = "<group>";
+		};
+		246BA96916EBE389005AA872 /* Decoder-POMHelp */ = {
+			isa = PBXGroup;
+			children = (
+				246BA96A16EBE389005AA872 /* CV-switch.html */,
+				2454FB0E16F3AE9800B0AC6C /* CV-servo.html */,
+				2454FB1016F3AEAA00B0AC6C /* CV-relays-4.html */,
+				2454FB1216F3AEB400B0AC6C /* CV-relays-16.html */,
+				2454FB1416F3AEC300B0AC6C /* CV-safety.html */,
+				246BA96B16EBE389005AA872 /* help.css */,
+				246BA96C16EBE389005AA872 /* index.html */,
+				246BA97416EBE588005AA872 /* intro.html */,
+				246BA97A16EBEFAF005AA872 /* IP.html */,
+				246BA97616EBE67C005AA872 /* addresses.html */,
+				24DE352D16F656A7005C1FED /* address-details.html */,
+			);
+			path = "Decoder-POMHelp";
+			sourceTree = "<group>";
+		};
+		2479A8161531CEBB00B93E37 = {
+			isa = PBXGroup;
+			children = (
+				246BA96816EBE389005AA872 /* Helpfiles */,
+				24086F3816EB98A500A00AD0 /* Graphics */,
+				2479A82B1531CEBB00B93E37 /* Source files */,
+				2479A8241531CEBB00B93E37 /* Frameworks */,
+				2479A8221531CEBB00B93E37 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2479A8221531CEBB00B93E37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2479A8211531CEBB00B93E37 /* Programmer Decoder-POM.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2479A8241531CEBB00B93E37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2479A8251531CEBB00B93E37 /* Cocoa.framework */,
+				2479A8271531CEBB00B93E37 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2479A8271531CEBB00B93E37 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2479A8281531CEBB00B93E37 /* AppKit.framework */,
+				2479A8291531CEBB00B93E37 /* CoreData.framework */,
+				2479A82A1531CEBB00B93E37 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		2479A82B1531CEBB00B93E37 /* Source files */ = {
+			isa = PBXGroup;
+			children = (
+				2479A8371531CEBB00B93E37 /* AppDelegate.h */,
+				2479A8381531CEBB00B93E37 /* AppDelegate.m */,
+				2479A83A1531CEBB00B93E37 /* MainMenu.xib */,
+				2422437D1531CF4200089699 /* TCPConnection.h */,
+				2422437C1531CF4200089699 /* TCPConnection.m */,
+				2422437F1531CF4200089699 /* DCCDecoder.h */,
+				2422437E1531CF4200089699 /* DCCDecoder.m */,
+				242243831531CF4200089699 /* PreferencesController.h */,
+				242243841531CF4200089699 /* PreferencesController.m */,
+				242243851531CF4200089699 /* PreferencesController.xib */,
+				2479A82C1531CEBB00B93E37 /* Supporting Files */,
+			);
+			name = "Source files";
+			path = "Programmer Decoder-POM";
+			sourceTree = "<group>";
+		};
+		2479A82C1531CEBB00B93E37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2416F9EE187B2376004A158B /* Decoder-POMHelp */,
+				2479A82D1531CEBB00B93E37 /* Programmer Decoder-POM-Info.plist */,
+				2479A82E1531CEBB00B93E37 /* InfoPlist.strings */,
+				2479A8311531CEBB00B93E37 /* main.m */,
+				2479A8331531CEBB00B93E37 /* Programmer Decoder-POM-Prefix.pch */,
+				2479A8341531CEBB00B93E37 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2479A8201531CEBB00B93E37 /* Programmer Decoder-POM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2479A83F1531CEBB00B93E37 /* Build configuration list for PBXNativeTarget "Programmer Decoder-POM" */;
+			buildPhases = (
+				2479A81D1531CEBB00B93E37 /* Sources */,
+				2479A81E1531CEBB00B93E37 /* Frameworks */,
+				2479A81F1531CEBB00B93E37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Programmer Decoder-POM";
+			productName = "Programmer GBM-POM";
+			productReference = 2479A8211531CEBB00B93E37 /* Programmer Decoder-POM.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2479A8181531CEBB00B93E37 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+			};
+			buildConfigurationList = 2479A81B1531CEBB00B93E37 /* Build configuration list for PBXProject "Programmer Decoder-POM" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2479A8161531CEBB00B93E37;
+			productRefGroup = 2479A8221531CEBB00B93E37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2479A8201531CEBB00B93E37 /* Programmer Decoder-POM */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2479A81F1531CEBB00B93E37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2479A8301531CEBB00B93E37 /* InfoPlist.strings in Resources */,
+				2479A8361531CEBB00B93E37 /* Credits.rtf in Resources */,
+				2479A83C1531CEBB00B93E37 /* MainMenu.xib in Resources */,
+				2422438B1531CF4200089699 /* PreferencesController.xib in Resources */,
+				246BA97516EBE588005AA872 /* intro.html in Resources */,
+				246BA97716EBE67C005AA872 /* addresses.html in Resources */,
+				246BA97B16EBEFAF005AA872 /* IP.html in Resources */,
+				2416F9EF187B2376004A158B /* Decoder-POMHelp in Resources */,
+				24553AAA16F123CA00EBFFD1 /* PoM-Decoder-icon.icns in Resources */,
+				24553AAB16F123CA00EBFFD1 /* PoM-Decoder-icon.key in Resources */,
+				24553AAC16F123CA00EBFFD1 /* PoM-Decoder-icon.png in Resources */,
+				2454FB0F16F3AE9800B0AC6C /* CV-servo.html in Resources */,
+				2454FB1116F3AEAA00B0AC6C /* CV-relays-4.html in Resources */,
+				2454FB1316F3AEB400B0AC6C /* CV-relays-16.html in Resources */,
+				2454FB1516F3AEC300B0AC6C /* CV-safety.html in Resources */,
+				24DE352E16F656A7005C1FED /* address-details.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2479A81D1531CEBB00B93E37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2479A8321531CEBB00B93E37 /* main.m in Sources */,
+				2479A8391531CEBB00B93E37 /* AppDelegate.m in Sources */,
+				242243861531CF4200089699 /* TCPConnection.m in Sources */,
+				242243871531CF4200089699 /* DCCDecoder.m in Sources */,
+				2422438A1531CF4200089699 /* PreferencesController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2479A82E1531CEBB00B93E37 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2479A82F1531CEBB00B93E37 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2479A8341531CEBB00B93E37 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2479A8351531CEBB00B93E37 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		2479A83A1531CEBB00B93E37 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2479A83B1531CEBB00B93E37 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2479A83D1531CEBB00B93E37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2479A83E1531CEBB00B93E37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2479A8401531CEBB00B93E37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Programmer Decoder-POM/Programmer Decoder-POM-Prefix.pch";
+				INFOPLIST_FILE = "Programmer Decoder-POM/Programmer Decoder-POM-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "AikoPras.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2479A8411531CEBB00B93E37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Programmer Decoder-POM/Programmer Decoder-POM-Prefix.pch";
+				INFOPLIST_FILE = "Programmer Decoder-POM/Programmer Decoder-POM-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "AikoPras.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2479A81B1531CEBB00B93E37 /* Build configuration list for PBXProject "Programmer Decoder-POM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2479A83D1531CEBB00B93E37 /* Debug */,
+				2479A83E1531CEBB00B93E37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2479A83F1531CEBB00B93E37 /* Build configuration list for PBXNativeTarget "Programmer Decoder-POM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2479A8401531CEBB00B93E37 /* Debug */,
+				2479A8411531CEBB00B93E37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2479A8181531CEBB00B93E37 /* Project object */;
+}

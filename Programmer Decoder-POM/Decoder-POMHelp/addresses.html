@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title> Decoder Programming Help - Addresses</title>
+    <meta name="AppleTitle" content="Decoder-POM Help" />
+    <meta name="AppleIcon" content="Decoder-POM Help/../../Icon.icns" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="noindex" />
+    <style type="text/css">
+      h1 {font: 21.0px Lucida Grande; margin:  0.0px 0.0px 18.0px 0.0px; font-weight: bold; color: rgb(102, 153, 204)}
+      h2 {font: 19.0px Lucida Grande; margin: 18.0px 0.0px  6.0px 0.0px; font-weight: bold; color: rgb(102, 153, 204)}
+      p  {font: 15.0px Lucida Grande; margin:  0.0px 0.0px  6.0px 6.0px;}
+      li {font: 15.0px Lucida Grande; margin:  0.0px 0.0px  0.0px 0.0px;}
+      ul {font: 15.0px Lucida Grande; margin:  0.0px 0.0px  0.0px 0.0px; list-style-type: disc}
+      </style>
+  </head>
+  
+  <body>
+    <h1>Understanding different kinds of addresses</h1>
+    
+    
+    <h2>Output address</h2>
+    <ul>
+      <li> Output addresses can be seen as the decoder's <b>main</b> addresses, since they are equivalent to switch (relays, ...) addresses.</li>
+      <li> Output addresses are entered on handhelds (like the LH100), computer programs as well as this sofware for decoder programming.</li>
+      <li> In Lenz environments (where the Xpressnet is used), output addresses range from 1..1024.</li>
+      <li> According to the NMRA specifications, output addresses should (in theory) range from 1..2044. However, some sources also state as maximum 2048.</li>
+    </ul>
+    
+    
+    <h2>Decoder address</h2>
+    <ul>
+      <li> A single decoder is generally able to address four outputs. 
+      <li> Decoder addresses used by this program range from 0..255 (which is also the range supported by XPressNet)</li>
+      <li> Although there is on the web some confusion regarding the exact relationship between output addresses and decoder addresses, the convention used by this program (and OPENDECODER 2.2) is that output addresses 1..4 map upon decoder address 0, 5..8 -> 1, 9..12 -> 2, 1021..1024 -> 255.</li>
+      <li> The decoder address is stored in EEPROM. Two CVs are used for this purpose: CV1 (lower 6 bits) and CV9 (higher 3 bits).</li>
+      <li> For this program (and and OPENDECODER 2.2) valid CV1 values range from 0..63; valid CV9 values range from 0..3.</li>
+      <li> By pressing the push button on the decoder's PCB, the first accessory address received by the decoder will be stored in EEPROM.</li>
+      <li> If the decoder has not yet been initialised, the decoder address (thus CV1 and CV9) can also (in addition to pressing the push button on the PCB) be set via the "Initialise Tab" of this program.</li>
+      <li> The decoder address (thus CV1 and CV9) can finally be changed via the "CV Tab" of this program. Doing so is not recommend, however, since errors may make the decoder non-responsive.</li>
+      <li> If the decoder address has not yet been initialised, the value stored in CV9 will be 0x80. This value represents an invalid decoder address, thus a decoder with this CV value will not be able to react to any accessory commands.</li>
+    </ul>
+    
+    
+    <h2>RS-Bus address</h2>
+    <ul>
+      <li> For sending feedback massages, decoders should have a valid RS-Bus address.</li>
+      <li> Valid RS-Bus addresses range from 1..128.</li>
+      <li> RS-Bus addresses are stored in EEPROM as CV10 (range: 1..128).</li>
+      <li> A decoder's RS-bus address will generally be one higher than the decoder's address. However, this only holds for decoder addresses between 0..127; decoders with a decoder address higher than 127 will generally not be able to send feedback messages.</li>
+      <li> The RS-bus address will automatically be initialised by this program, as a side effect of setting the switch (and thus decoder's) address via the "Initialise Tab".</li>
+      <li> The RS-bus address can also be changed via the "CV Tab" of this program.</li>
+      <li> In case a RS-Bus address has not yet been initialised, CV10 holds as value 0.</li>
+    </ul>
+    
+    
+    <h2>Loco address</h2>
+    <ul>
+      <li> The OPENDECODER 2.2 (switch, servo, relays, safety,...) decoders listen to locomotive addresses for reception of PoM messages (such as used by this program).</li>
+      <li> The PoM address equals the decoder address + 7001.</li>
+      <li> In case of SkipEven, the decoder will also listen to a PoM address that is 1 higher (thus decoder address + 7002).</li>
+      <li> A decoder that has not yet been initialised, will listen to address 7000. This is also the address the "Initialise Tab" of this program uses to initialise the decoder.</li>
+    </ul>
+    
+    
+    <h2>Special case: RS-Bus address 128</h2>
+    <ul>
+      <li> For sending normal feedback massages, decoders use RS-Bus addresses in the range 1..127.</li>
+      <li> RS-Bus address 128 is used for sending special feedback messages to react on PoM Verify messages, which are send by this program.</li>
+      <li> Also decoders with an invalid RS-Bus address will use RS-Bus address 128 to react on PoM Verify messages. In this way also decoders with higher decoder addresses than 128 can send the values of their CVs to this program.</li>
+      <li> To instruct a decoder to switch to PoM-mode (and thus use RS-Bus address 128), a special CV should be set before starting PoM. This program will automatically set this CV once the user of this program enters a new (switch) address. By restarting the decoder or selecting another decoder, PoM-mode will be released and the decoder will continue using its normal RS-Bus address for sending normal feedback messages.</li>
+    </ul>
+
+    
+    <p> See also <a href="address-details.html">detailed address coding</a> on the wire.</p>
+    
+
+
+    
+  </body>
+  
+</html>

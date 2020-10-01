@@ -1,0 +1,2049 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1187.34">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: right; font: 14.0px Arial}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px Arial}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: right; font: 12.0px Arial}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; color: #e32400}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; color: #0042aa}
+    span.s1 {letter-spacing: 0.0px}
+    table.t1 {background-color: #ffffff; border-collapse: collapse}
+    td.td1 {width: 20.0px; height: 14.8px; background-color: #ebebeb; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td2 {width: 24.0px; height: 14.8px; background-color: #ebebeb; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td3 {width: 1.0px; height: 14.8px; background-color: #ebebeb; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td4 {width: 98.0px; height: 14.8px; background-color: #ebebeb; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td5 {width: 97.0px; height: 14.8px; background-color: #ebebeb; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td6 {width: 81.0px; height: 14.8px; background-color: #ebebeb; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td7 {width: 387.0px; height: 14.8px; background-color: #ebebeb; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td8 {width: 397.0px; height: 14.8px; background-color: #ebebeb; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td9 {width: 20.0px; height: 14.8px; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td10 {width: 24.0px; height: 14.8px; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td11 {width: 1.0px; height: 14.8px; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td12 {width: 98.0px; height: 14.8px; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td13 {width: 97.0px; height: 14.8px; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td14 {width: 81.0px; height: 14.8px; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td15 {width: 387.0px; height: 14.8px; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td16 {width: 397.0px; height: 14.8px; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td17 {width: 1140.0px; height: 22.9px; background-color: #ebebeb; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td18 {width: 397.0px; height: 14.8px; background-color: #ffffff; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td19 {width: 1140.0px; height: 22.6px; background-color: #ebebeb; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td20 {width: 20.0px; height: 14.0px; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td21 {width: 24.0px; height: 14.0px; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td22 {width: 1.0px; height: 14.0px; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td23 {width: 98.0px; height: 14.0px; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td24 {width: 97.0px; height: 14.0px; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td25 {width: 81.0px; height: 14.0px; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td26 {width: 387.0px; height: 14.0px; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td27 {width: 397.0px; height: 14.0px; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+    td.td28 {width: 1140.0px; height: 22.7px; background-color: #ebebeb; border-style: solid; border-width: 0.2px 0.2px 0.2px 0.2px; border-color: #cccccc #cccccc #cccccc #cccccc; padding: 0.0px 2.0px 0.0px 2.0px}
+  </style>
+</head>
+<body>
+<p class="p1"><br></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="bottom" class="td1">
+        <p class="p2"><span class="s1"><b>CV</b></span></p>
+      </td>
+      <td valign="bottom" class="td2">
+        <p class="p2"><span class="s1"><b>CV’</b></span></p>
+      </td>
+      <td valign="bottom" class="td3">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td4">
+        <p class="p3"><span class="s1"><b>Name</b></span></p>
+      </td>
+      <td valign="bottom" class="td5">
+        <p class="p3"><span class="s1"><b>Access</b></span></p>
+      </td>
+      <td valign="bottom" class="td6">
+        <p class="p3"><span class="s1"><b>Default value</b></span></p>
+      </td>
+      <td valign="bottom" class="td7">
+        <p class="p4"><span class="s1"><b>Description</b></span></p>
+      </td>
+      <td valign="bottom" class="td8">
+        <p class="p4"><span class="s1"><b>Remarks</b></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">1</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">513</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">myAddrL</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0x01</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Accessory decoder Address low, 6 bits</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p6"><span class="s1"><i>Can be used (depending DecType) to switch extension board relays</i></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">2</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">514</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">3</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">515</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">4</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">516</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">5</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">517</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">6</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">518</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">7</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">519</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">version</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p8"><span class="s1">R</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0x08</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Version</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p6"><span class="s1"><i>Version should be 8 or higher</i></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">8</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">520</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">VID</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W (write=reset)</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0x0D</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Vendor ID (0x0D = DIY Decoder)</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p6"><span class="s1"><i>Can be used to reset the decoder to its “factory” settings</i></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">9</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">521</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">myAddrH</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0x80</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Accessory Decoder Address high (3 bits)</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p6"><span class="s1"><i>Usage in conjunction with CV1</i></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">10</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">522</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">11</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">523</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">DelayIn1</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Delay in 10ms steps before sending OFF signal (like Lenz)</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p6"><span class="s1"><i>CV11-CV18 conform LENZ LR101</i></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">12</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">524</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">DelayIn2</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Same, for input 2. If 0, CV555 will be used instead</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">13</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">525</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">DelayIn3</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Same, for input 3. If 0, CV555 will be used instead</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">14</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">526</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">DelayIn4</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Same, for input 4. If 0, CV555 will be used instead</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">15</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">527</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">DelayIn5</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Same, for input 5. If 0, CV555 will be used instead</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">16</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">528</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">DelayIn6</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Same, for input 6. If 0, CV555 will be used instead</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">17</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">529</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">DelayIn7</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Same, for input 7. If 0, CV555 will be used instead</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p6"><span class="s1"><i>Note: CV17 and CV18 are used by Loc decoders for extended address</i></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">18</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">530</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">DelayIn8</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Same, for input 8. If 0, CV555 will be used instead</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p6"><span class="s1"><i>Note: CV17 and CV18 are used by Loc decoders for extended address</i></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">19</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">531</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">20</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">532</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">21</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">533</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">VID_2</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p8"><span class="s1">R</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0x0D</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Second Vendor ID, to detect AP decoders</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">22</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">534</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">DecType</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">bx00110000</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Decoder Type</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p6"><span class="s1"><i>Only variants for the Track Occupancy decoder are acceptable</i></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">bx00010000 - Swith decoder</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">bx00010001 - Swith decoder with Emergency board</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">bx00010100 - Servo Decoder</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">bx00100000 - Relais decoder for 4 relais</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">bx00100001 - Relais decoder for 16 relais</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">bx00110000 - Track Occupancy decoder</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p6"><span class="s1"><i>Basic Track Occupancy (Feedback) decoder</i></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">bx00110001 - Track Occupancy decoder with reverser</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p6"><span class="s1"><i>Reverser on extension board</i></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">bx00110010 - Track Occupancy decoder with relays</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p6"><span class="s1"><i>Four relays on extension board</i></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">bx00110100 - Track Occupancy decoder with speed measurement</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p6"><span class="s1"><i>Speed is displayed on connected LCD</i></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">bx01000000 - Function Decoder</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">bx10000000 - Watchdog and safety decoder</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">23</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">535</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">Search</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">If 1: decoder LED blinks</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p6"><span class="s1"><i>Note: this CV can be set but will never be stored in EEPROM</i></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">24</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">536</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">Restart</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">To restart (as opposed to reset) the decoder: use after PoM writes</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p6"><span class="s1"><i>Note: this CV can be set but will never be stored in EEPROM</i></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">25</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">537</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">RSRetry</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Number of RS-Bus retransmissions</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">26</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">538</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">LenzCor</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">1</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">LENZ accessory decoder address correction</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p6"><span class="s1"><i>The Lenz LZV100 does not always generate correct DCC addresses</i></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">27</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">539</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">28</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">540</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">29</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">541</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">Config</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p8"><span class="s1">R</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">similar to CV#29; for acc. decoders</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p6"><span class="s1"><i>This CV is checked in the decoder software and may not be changed</i></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">(1&lt;&lt;7)</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">// 1 = we are accessory</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">| (0&lt;&lt;6)</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">// 0 = we do 9 bit decoder addressing</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">| (0&lt;&lt;5)</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">// 0 = we are basic accessory decoder</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">| 0</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">// 4..0: all reserved</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">30</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">542</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">31</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">543</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">32</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">544</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">33</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">545</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">34</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">546</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="8" valign="bottom" class="td17">
+        <p class="p4"><span class="s1"><b>CVs used by the Speed Measurement specific variant of the Track Occupancy Decoder</b></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">35</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">547</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">Speed1_Out</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Track number (1..8) for the first speed measurement track (0=none)</span></p>
+      </td>
+      <td valign="bottom" class="td18">
+        <p class="p6"><span class="s1"><i>The time measured between two feedback signals, divided by the</i></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">36</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">548</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">Speed1_LL</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Length in cm of the first speed measurement track (low order byte)</span></p>
+      </td>
+      <td valign="bottom" class="td18">
+        <p class="p6"><span class="s1"><i>length of the feedback track, gives the train speed</i></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">37</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">549</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">Speed1_LH</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Length in cm of the first speed measurement track (high order byte)</span></p>
+      </td>
+      <td valign="bottom" class="td18">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">38</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">550</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">Speed2_Out</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Track number (1..8) for the second speed measurement track (0=none)</span></p>
+      </td>
+      <td valign="bottom" class="td18">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">39</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">551</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">Speed2_LL</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Length in cm of the second speed measurement track (low order byte)</span></p>
+      </td>
+      <td valign="bottom" class="td18">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">40</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">552</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">Speed2_LH</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Length in cm of the second speed measurement track (high order byte)</span></p>
+      </td>
+      <td valign="bottom" class="td18">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="8" valign="bottom" class="td19">
+        <p class="p4"><span class="s1"><b>CVs used by all variants of the Track Occupancy Decoder</b></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">41</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">553</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p7"><span class="s1"><b>myRSAddr</b></span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">255</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">RS-bus address (Main address of the Feedback decoder)</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p6"><span class="s1"><i>Can be set via button on decoder print</i></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">42</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">554</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">Min_Samples</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">3</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">How many consecutive ON samples are needed with the same</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">outcome before the result is considered to be stable</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Note: every sample takes 8 msec, so "3"gives 24 msec extra delay</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">43</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">555</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">Delay_off</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">15</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Delay (in 100 ms steps) before previous occupancy will be released</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">44</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">556</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">Threshold_on</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">20</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Above this value a previous OFF sample will be regarded as ON</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">45</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">557</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">Threshold_of</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">15</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Below this value a previous ON sample will be regarded as OFF</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Note that the value of threshold_of should be lower than threshold_on</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Below some values for specific resistor values</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">82K=7,<span class="Apple-converted-space">  </span>68K=8,<span class="Apple-converted-space">  </span>56K=10, 47K=12, 39K=15, 33K= 18</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td20">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td21">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td22">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td23">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td24">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td25">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td26">
+        <p class="p6"><span class="s1">27K=22, 22K=28, 18K=34, 15K=41, 12K=52, 10K= 68</span></p>
+      </td>
+      <td valign="bottom" class="td27">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="8" valign="bottom" class="td28">
+        <p class="p4"><span class="s1"><b>CVs used by the Reverser specific variant of the Track Occupancy Decoder</b></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">46</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">558</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">FB_A</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">1</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Feedback bit if track A is occupied</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">47</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">559</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">FB_B</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">2</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Feedback bit if track B is occupied</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">48</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">560</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">FB_C</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">3</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Feedback bit if track C is occupied</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">49</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">561</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">FB_D</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">4</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Feedback bit if track D is occupied</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">50</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">562</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">FB_S1</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">1</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Feedback bit if Sensor 1 is active</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">51</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">563</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">FB_S2</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">2</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Feedback bit if Sensor 2 is active</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">52</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">564</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">FB_S3</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">2</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Feedback bit if Sensor 3 is active</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">53</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">565</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">FB_S4</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">3</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">Feedback bit if Sensor 4 is active</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td9">
+        <p class="p5"><span class="s1">54</span></p>
+      </td>
+      <td valign="bottom" class="td10">
+        <p class="p5"><span class="s1">566</span></p>
+      </td>
+      <td valign="bottom" class="td11">
+        <p class="p1"><br></p>
+      </td>
+      <td valign="bottom" class="td12">
+        <p class="p6"><span class="s1">Polarization</span></p>
+      </td>
+      <td valign="bottom" class="td13">
+        <p class="p7"><span class="s1">R/W</span></p>
+      </td>
+      <td valign="bottom" class="td14">
+        <p class="p6"><span class="s1">0</span></p>
+      </td>
+      <td valign="bottom" class="td15">
+        <p class="p6"><span class="s1">If 0: J&amp;K connected normal / if 1: J&amp;K polarization changed</span></p>
+      </td>
+      <td valign="bottom" class="td16">
+        <p class="p1"><br></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p1"><br></p>
+</body>
+</html>
