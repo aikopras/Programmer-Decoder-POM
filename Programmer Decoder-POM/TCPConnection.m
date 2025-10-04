@@ -53,12 +53,14 @@
 // ******************************************************* Local C type definitions and declarations *************************************************
 // ***************************************************************************************************************************************************
 #define POM_OFFSET 7000                   // First PoM address starts from this address
-#define RS_BUS_TIMEOUT 0.25               // timeout, in seconds, to receive a RS-Bus feedback response to a previous PoM verify message
-#define POM_TIMEOUT 0.1                   // timeout, to receive a "Request Forwarded to Master Station" response to a previous PoM write message
+//#define RS_BUS_TIMEOUT 0.25               // timeout, in seconds, to receive a RS-Bus feedback response to a previous PoM verify message
+#define RS_BUS_TIMEOUT 2.5               // timeout, in seconds, to receive a RS-Bus feedback response to a previous PoM verify message
+#define POM_TIMEOUT 0.2                   // timeout, to receive a "Request Forwarded to Master Station" response to a previous PoM write message
 #define POM_WRITE_DELAY 0.05              // Extra delay we introduce between PoM write requests
-                                          //
+//#define POM_WRITE_DELAY 0.4              // Extra delay we introduce between PoM write requests
+                                         //
                                           // Declarations below should preferable not be changed
-#define MAX_CVS 256                       // Number of CVs we support. Note that we map 257->1, 513->1 etc.
+#define MAX_CVS 512                       // Number of CVs we support. Note that we map 513->1 etc.
 #define MAX_INSTREAM 1                    // size TCP input stream for the LENZ interface(s)
 #define MAX_INBUFFER 32                   // max. TCP input buffer size for the LENZ interface(s)
                                           // We keep two sets of buffer variables: one for the interface over which PoM messages are send,
@@ -241,7 +243,7 @@ struct lenzStatus_t lenzStatusRS;
 // ***************************************************** REQUESTS MUST BE QUEUED BEFORE TRANSMISSION **************************************************
 // ****************************************************************************************************************************************************
 - (void)queuePomWritePacketForCV:(int)cvNumber {
-  // We map CV257->CV1, CV513_CV1 etc. Thus we operate modulo MAX_CVS
+  // We map CV513_CV1 etc. Thus we operate modulo MAX_CVS
   int adjustedCvNumber = cvNumber % MAX_CVS;
   cvs_write[adjustedCvNumber].cvValue = [_topObject.dccDecoderObject getCv:adjustedCvNumber];
   cvs_write[adjustedCvNumber].cvIsQueued = 1;
@@ -251,7 +253,7 @@ struct lenzStatus_t lenzStatusRS;
 - (void)queuePomVerifyPacketForCV:(int)cvNumber {
   // Do not queue any verify packets if the TCP connection to receive feedbacks is not open
   if (_iStreamRS == nil) return;
-  // We map CV257->CV1, CV513_CV1 etc. Thus we operate modulo MAX_CVS
+  // We map CV513_CV1 etc. Thus we operate modulo MAX_CVS
   int adjustedCvNumber = cvNumber % MAX_CVS;
   cvs_verify[adjustedCvNumber] = 1;
 }
@@ -597,7 +599,7 @@ struct lenzStatus_t lenzStatusRS;
 
 
 - (void)expectNextPomFrame {
-  // is called to prepare reception of teh next frame
+  // is called to prepare reception of the next frame
   pomInputBufferSize = 0;
 }
 
@@ -616,6 +618,7 @@ struct lenzStatus_t lenzStatusRS;
   if (len == 1) {
     // We have an input byte (no error reading from stream)
     // NSLog(@"char = %0x", rsBusInStream[0]);  // for testing
+    // printf(" 0x%X" , rsBusInStream[0]);           // for testing, without CR/LF
     totalRsBusBytes++;
     if (rsBusSynchronized) {
       rsBusInBuffer[rsBusInputBufferSize] = rsBusInStream[0];
@@ -669,6 +672,8 @@ struct lenzStatus_t lenzStatusRS;
       if (rsBusInBuffer[1] == 0xFD) {
         // Check if this is a Feedback message
         if ((rsBusInBuffer[2] & 0b11110000) == 0x40) {
+          NSLog(@"%0x %0x  %0x %0x %0x %0x", rsBusInBuffer[0], rsBusInBuffer[1], rsBusInBuffer[2], rsBusInBuffer[3], rsBusInBuffer[4], rsBusInBuffer[5]);  // for testing
+
           // In most cases we may expect feedback messages as reaction to PoM verify messages
           // Two cases are possible, however:
           // 1) After sending the PoM verify request no errors occured. In that case we should handle the frame
@@ -715,7 +720,7 @@ struct lenzStatus_t lenzStatusRS;
 
 
 - (void)expectNextRsBusFrame {
-  // is called to prepare reception of teh next frame
+  // is called to prepare reception of the next frame
   rsBusInputBufferSize = 0;
 }
 
@@ -730,7 +735,7 @@ struct lenzStatus_t lenzStatusRS;
   parity = (uint8_t) rsBusInBuffer[2];
   xor_length = (rsBusInBuffer[2] & 0b00001111) + 4;
   for (int i = 3; i < xor_length; i++) {parity ^= (uint8_t) rsBusInBuffer[i];}
-  if (parity) {[self expectNextRsBusFrame];; return;} // Parity error
+  if (parity) {NSLog(@"Parity Error"); [self expectNextRsBusFrame]; return;} // Parity error
   // Fill in the RS-bus fields. Note that a single xpressbus feedback packet may include upto 7 feedback messages
   // We'll handle them one by one, in a relative simple way
   // Message 1
@@ -765,6 +770,7 @@ struct lenzStatus_t lenzStatusRS;
   if (ReceivedAddress == 128) {
     uint8_t value   = (byte2 & 0b00001111);
     uint8_t nibble  = (byte2 & 0b00010000) >> 4;
+    // NSLog(@"Value:%d, ", value);
     if (nibble == 0){
       if (waiting_for_second_nibble == 0) {
         // this is the normal case
@@ -784,7 +790,7 @@ struct lenzStatus_t lenzStatusRS;
         uint8_t totalnibble = (value << 4) + nibble1Value;
         // Inform the AppDelegate we've received a feedback message
         [_topObject feedbackPacketReceivedForAddress:ReceivedAddress withCV:previousVerifyCv withValue:totalnibble];
-        // NSLog(@"Address:%d - CV:%d - Value:%d, ", ReceivedAddress, previousVerifyCv, totalnibble);
+         NSLog(@"Address:%d - CV:%d - Value:%d, ", ReceivedAddress, previousVerifyCv, totalnibble);
         // Update the receive status line
         NSString *message = @"Feedback received. Address=";
         message = [message stringByAppendingString:[NSString stringWithFormat:@"%d",ReceivedAddress]];

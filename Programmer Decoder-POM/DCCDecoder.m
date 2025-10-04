@@ -30,11 +30,12 @@
 // ************************************************************************************************************
 // ************************************** DECLARATION AND USE OF THE CVSTORE **********************************
 // ************************************************************************************************************
-#define MAX_CVS 256                    // Number of CVs we support. Note that we map 257->1, 513->1 etc.
+#define MAX_CVS 512                    // Number of CVs we support. Note that we map 513->1 etc.
 uint8_t cvStore[MAX_CVS + 1];          // Array is indexed by CV number, and hold its current value
 
 
 - (void)setCv:(int)number withValue:(u_int8_t)value{
+  //NSLog(@"Feedback received. CV:%d Value:%d", number, value);
   cvStore[number] = value;
 }
 
@@ -68,7 +69,9 @@ uint8_t cvStore[MAX_CVS + 1];          // Array is indexed by CV number, and hol
   NSString *string = @"unknown";
   if      (cvStore[DecType] == 16)  {string = @"Swith decoder";}
   else if (cvStore[DecType] == 17)  {string = @"Swith decoder";}
-  else if (cvStore[DecType] == 20)  {string = @"Servo Decoder";}
+  else if (cvStore[DecType] == 20)  {string = @"Servo-2 Decoder";}
+  else if (cvStore[DecType] == 21)  {string = @"Servo-3 Decoder";}
+  else if (cvStore[DecType] == 24)  {string = @"Lift Decoder";}
   else if (cvStore[DecType] == 32)  {string = @"Relays decoder";}
   else if (cvStore[DecType] == 33)  {string = @"Relays decoder";}
   else if (cvStore[DecType] == 48)  {string = @"Track Occupancy decoder";}
@@ -85,6 +88,7 @@ uint8_t cvStore[MAX_CVS + 1];          // Array is indexed by CV number, and hol
   if      (cvStore[DecType] == 16)  {string = @"";}
   else if (cvStore[DecType] == 17)  {string = @"with Emergency board";}
   else if (cvStore[DecType] == 20)  {string = @"";}
+  else if (cvStore[DecType] == 24)  {string = @"";}
   else if (cvStore[DecType] == 32)  {string = @"for 4 relais";}
   else if (cvStore[DecType] == 33)  {string = @"for 16 relais";}
   else if (cvStore[DecType] == 48)  {string = @"";}

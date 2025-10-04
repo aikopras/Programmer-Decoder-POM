@@ -53,6 +53,10 @@
 @synthesize buttonSwitchTabGet         = _buttonSwitchTabGet;
 @synthesize buttonSwitchTabSet         = _buttonSwitchTabSet;
 //
+// RS-Bus tab properties
+@synthesize comboRsFec                 = _comboRsFec;
+@synthesize buttonRsBusTabSet          = _buttonRsBusTabSet;
+//
 // Initialise tab properties
 @synthesize addressNew                   = _addressNew;
 @synthesize iniTabDecoderAddress         = _iniTabDecoderAddress;
@@ -128,6 +132,7 @@
 - (void) updateTabs {
   [self updateMainWindow];
   [self updateControlTab];
+  [self updateRsBusTab];
   [self updateSwitchTab];
   [self updateIniTab];
   [self updateCvTab];
@@ -197,7 +202,7 @@
 }
 
 - (void)readAllCvs{
-  uint8_t cvNumber;
+  uint16_t cvNumber;
   [_tcpConnectionsObject queuePomVerifyPacketForCV:1];
   for (cvNumber= 3; cvNumber <= 10; cvNumber++) [_tcpConnectionsObject queuePomVerifyPacketForCV:cvNumber];
   for (cvNumber=19; cvNumber <= 21; cvNumber++) [_tcpConnectionsObject queuePomVerifyPacketForCV:cvNumber];
@@ -273,7 +278,8 @@
   uint8_t newValue = 16; // Select the default value
   if ([newString isEqualToString:@"switch"])      {newValue = 16;}
   if ([newString isEqualToString:@"switch plus"]) {newValue = 17;}
-  if ([newString isEqualToString:@"servo"])       {newValue = 20;}
+  if ([newString isEqualToString:@"servo-2"])     {newValue = 20;}
+  if ([newString isEqualToString:@"servo-3"])     {newValue = 21;}
   if ([newString isEqualToString:@"relays-4"])    {newValue = 32;}
   if ([newString isEqualToString:@"relays-16"])   {newValue = 33;}
   if ([newString isEqualToString:@"safety"])      {newValue = 128;}
@@ -322,9 +328,12 @@
   // DecType
   newString = @"switch";   // default
   if ([_dccDecoderObject getCv:DecType] == 17)  newString = @"switch plus";
-  if ([_dccDecoderObject getCv:DecType] == 20)  newString = @"servo";
+  if ([_dccDecoderObject getCv:DecType] == 20)  newString = @"servo-2";
+  if ([_dccDecoderObject getCv:DecType] == 21)  newString = @"servo-3";
+  if ([_dccDecoderObject getCv:DecType] == 24)  newString = @"lift";
   if ([_dccDecoderObject getCv:DecType] == 32)  newString = @"relays-4";
   if ([_dccDecoderObject getCv:DecType] == 33)  newString = @"relays-16";
+  if ([_dccDecoderObject getCv:DecType] == 64)  newString = @"function";
   if ([_dccDecoderObject getCv:DecType] == 128) newString = @"safety";
   [_comboDecType selectItemWithObjectValue: newString];
 }
@@ -332,6 +341,28 @@
 - (void)colorGetButtonControlTab:(int)isRed {
   if (isRed) [self setButtonTitleFor:_buttonControlTabSet toString:@"SET" withColor:[NSColor redColor]];
     else     [self setButtonTitleFor:_buttonControlTabSet toString:@"SET" withColor:[NSColor blackColor]];
+}
+
+
+// ************************************************************************************************************
+// ************************************* USER INTERFACE METHODS - RS-BUS TAB **********************************
+// ************************************************************************************************************
+- (IBAction)selectedRsFec:(id)sender {
+  uint8_t newValue = [sender intValue];
+  if (newValue < 0) {newValue = 0;}
+  if (newValue > 2) {newValue = 2;}
+  [_dccDecoderObject setCv:RSRetry withValue:newValue];
+  [self colorGetButtonRsBusTab:1];
+}
+
+- (void) updateRsBusTab {
+  // RSFEC
+  [_comboRsFec setIntValue:[_dccDecoderObject getCv:RSRetry]];
+}
+
+- (void)colorGetButtonRsBusTab:(int)isRed {
+  if (isRed) [self setButtonTitleFor:_buttonRsBusTabSet toString:@"SET" withColor:[NSColor redColor]];
+    else     [self setButtonTitleFor:_buttonRsBusTabSet toString:@"SET" withColor:[NSColor blackColor]];
 }
 
 
@@ -437,7 +468,7 @@
   [_comboAlwaysAct selectItemWithObjectValue: newString];
 }
 
-- (void)storeSwitchDelayCv:(uint8_t)cvNumber with:(float)cvFloatValue {
+- (void)storeSwitchDelayCv:(uint16_t)cvNumber with:(float)cvFloatValue {
   if (cvFloatValue > 2.55) {cvFloatValue = 2.55;}
   if (cvFloatValue < 0.00) {cvFloatValue = 0;}
   uint8_t intValue = cvFloatValue * 50;
@@ -577,7 +608,7 @@
 }
 
 - (void)updateCvTab {
-  if ((_dccDecoderObject.cvNumber > 0) && (_dccDecoderObject.cvNumber <=256)) 
+  if ((_dccDecoderObject.cvNumber > 0) && (_dccDecoderObject.cvNumber <=512)) 
     [_cvValue setIntValue:[_dccDecoderObject getCv:_dccDecoderObject.cvNumber]];
 }
 
