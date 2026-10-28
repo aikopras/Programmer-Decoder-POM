@@ -2,7 +2,7 @@
 Xcode project: macOS software to configure the DCC switch decoders
 
 This program allows the initialisation (by reading and modifying CV variables) of the [switch decoders](https://github.com/aikopras/OPENDECODER22). These decoders can be used to change the position of switches and relays. Any changes regarding the position of switches will be send back to the master station via RS-Bus messages. Given that it uses RS-Bus messages for feedback, the decoders will primarily be interesting in environments with LENZ Master stations (like the LZV 100) connected via the LAN/USB interface (23151).<BR>
-The program is written for macOS; the executable can be [downloaded directly](/Compiled%20Application/Programmer_Decoder_PoM.zip) or can be compiled from scratch using Xcode (see below).<BR>
+The program is written for macOS; the executable can be [downloaded directly](/Compiled%20Application/Programmer%20Decoder-POM.zip) or can be compiled from scratch using Xcode (see below).<BR>
 
 ## Requirements ##
 - macOS 12 (Monterey) or later.
@@ -10,7 +10,7 @@ The program is written for macOS; the executable can be [downloaded directly](/C
 - One or two Lenz LAN/USB interfaces (23151).
 
 ## Installation ##
-1. Download [Programmer_Decoder_PoM.zip](/Compiled%20Application/Programmer_Decoder_PoM.zip), unzip it and move the application to the Applications folder.
+1. Download [Programmer Decoder-POM.zip](/Compiled%20Application/Programmer%20Decoder-POM.zip), unzip it and move the application to the Applications folder.
 2. The application is not notarized by Apple, so macOS blocks it the first time it is opened. To allow it, open System Settings → Privacy & Security (on macOS 12: System Preferences → Security & Privacy → General) and click "Open Anyway".
 3. On recent macOS versions the system may ask whether the application may access devices on the local network. Allow this; otherwise the TCP connections to the Lenz interface(s) fail.
 
