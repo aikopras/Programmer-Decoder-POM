@@ -421,7 +421,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Programmer Decoder-POM/Programmer Decoder-POM-Prefix.pch";
 				INFOPLIST_FILE = "Programmer Decoder-POM/Programmer Decoder-POM-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = "macOS 12.4";
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "AikoPras.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,7 +439,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Programmer Decoder-POM/Programmer Decoder-POM-Prefix.pch";
 				INFOPLIST_FILE = "Programmer Decoder-POM/Programmer Decoder-POM-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = "macOS 12.4";
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "AikoPras.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
