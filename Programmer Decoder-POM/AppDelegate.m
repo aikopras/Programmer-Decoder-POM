@@ -141,6 +141,7 @@
   if ([_dccDecoderObject getCv:DecType] == 16) {[self showSwitchTab]; [self updateSwitchTab];}
 }
 
+
 // ************************************************************************************************************
 // ********************************** FEEDBACK MESSAGE RECEIVED BY THE TCP OBJECT *****************************
 // ************************************************************************************************************
@@ -169,10 +170,12 @@
   newValue = newValue - 1;   // entering is 1..1024 <-> storing is 0..1023
   newValue = newValue >> 2;   // decoder address = switch address DIV 4
   [_dccDecoderObject setDecoderAddress:newValue];
+  [_tcpConnectionsObject openTcpIfClosed];   // 2026: reconnect if the Lenz interface(s) were not available before
 }
 
 - (IBAction)selectAddressPushed:(id)sender {
   [self readLastInputFromTextFields];
+  [_tcpConnectionsObject openTcpIfClosed];   // 2026: reconnect if the Lenz interface(s) were not available before
   [self readAllCvs];
 }
 
@@ -662,7 +665,7 @@ NSTabViewItem *holderForTabSwitch;
 -(IBAction)showPreferences:(id)sender { 
   if (_preferencesController == nil)
     _preferencesController = [[PreferencesController alloc] initWithWindowNibName:@"PreferencesController"];
-  [_preferencesController showWindow:self]; 
+  [_preferencesController showWindow:self];
 }
 
 - (void)checkPreferences{
@@ -677,8 +680,8 @@ NSTabViewItem *holderForTabSwitch;
 
 - (void)initialisePreferences{
   // Create a new preferences file
-  [[NSUserDefaults standardUserDefaults] setObject:@"192.168.1.212"        forKey:@"defaultIpAddressForSending"];
-  [[NSUserDefaults standardUserDefaults] setObject:@"192.168.1.213"        forKey:@"defaultIpAddressForReceiving"];
+  [[NSUserDefaults standardUserDefaults] setObject:@"192.168.24.212"       forKey:@"defaultIpAddressForSending"];
+  [[NSUserDefaults standardUserDefaults] setObject:@"192.168.24.213"       forKey:@"defaultIpAddressForReceiving"];
   [[NSUserDefaults standardUserDefaults] setBool:1                         forKey:@"defaultIpAddressForReceivingIsActive"];
 }
 
@@ -688,7 +691,7 @@ NSTabViewItem *holderForTabSwitch;
 - (void)dealloc {[super dealloc];}
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication {return YES;}
-
+- (BOOL)applicationSupportsSecureRestorableState:(NSApplication *)app {return YES;}
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
   [_tcpConnectionsObject closeTcp];

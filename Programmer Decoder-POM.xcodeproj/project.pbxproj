@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,8 @@
 		2479A8361531CEBB00B93E37 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2479A8341531CEBB00B93E37 /* Credits.rtf */; };
 		2479A8391531CEBB00B93E37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2479A8381531CEBB00B93E37 /* AppDelegate.m */; };
 		2479A83C1531CEBB00B93E37 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2479A83A1531CEBB00B93E37 /* MainMenu.xib */; };
+		24813D16309244C1004D4847 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24813D15309244C1004D4847 /* Network.framework */; };
+		24813D1B30924A54004D4847 /* TCPSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 24813D1A30924A54004D4847 /* TCPSocket.m */; };
 		24DE352E16F656A7005C1FED /* address-details.html in Resources */ = {isa = PBXBuildFile; fileRef = 24DE352D16F656A7005C1FED /* address-details.html */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,9 @@
 		2479A8351531CEBB00B93E37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2479A8371531CEBB00B93E37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2479A8381531CEBB00B93E37 /* AppDelegate.m */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		24813D15309244C1004D4847 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
+		24813D1930924A36004D4847 /* TCPSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCPSocket.h; sourceTree = "<group>"; };
+		24813D1A30924A54004D4847 /* TCPSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCPSocket.m; sourceTree = "<group>"; };
 		24DE352D16F656A7005C1FED /* address-details.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "address-details.html"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2479A8261531CEBB00B93E37 /* Cocoa.framework in Frameworks */,
+				24813D16309244C1004D4847 /* Network.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,8 +95,7 @@
 				24553AA816F123CA00EBFFD1 /* PoM-Decoder-icon.key */,
 				24553AA916F123CA00EBFFD1 /* PoM-Decoder-icon.png */,
 			);
-			name = Graphics;
-			path = graphics;
+			path = Graphics;
 			sourceTree = "<group>";
 		};
 		246BA96816EBE389005AA872 /* Helpfiles */ = {
@@ -142,6 +147,7 @@
 		2479A8241531CEBB00B93E37 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24813D15309244C1004D4847 /* Network.framework */,
 				2479A8251531CEBB00B93E37 /* Cocoa.framework */,
 				2479A8271531CEBB00B93E37 /* Other Frameworks */,
 			);
@@ -161,6 +167,8 @@
 		2479A82B1531CEBB00B93E37 /* Source files */ = {
 			isa = PBXGroup;
 			children = (
+				24813D1A30924A54004D4847 /* TCPSocket.m */,
+				24813D1930924A36004D4847 /* TCPSocket.h */,
 				2479A8371531CEBB00B93E37 /* AppDelegate.h */,
 				2479A8381531CEBB00B93E37 /* AppDelegate.m */,
 				2479A83A1531CEBB00B93E37 /* MainMenu.xib */,
@@ -216,7 +224,8 @@
 		2479A8181531CEBB00B93E37 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1240;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2710;
 			};
 			buildConfigurationList = 2479A81B1531CEBB00B93E37 /* Build configuration list for PBXProject "Programmer Decoder-POM" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -271,6 +280,7 @@
 				2479A8391531CEBB00B93E37 /* AppDelegate.m in Sources */,
 				242243861531CF4200089699 /* TCPConnection.m in Sources */,
 				242243871531CF4200089699 /* DCCDecoder.m in Sources */,
+				24813D1B30924A54004D4847 /* TCPSocket.m in Sources */,
 				2422438A1531CF4200089699 /* PreferencesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,8 +339,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -348,9 +360,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 			};
 			name = Debug;
 		};
@@ -378,8 +391,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -390,8 +405,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 			};
 			name = Release;
 		};
@@ -401,11 +417,12 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Programmer Decoder-POM/Programmer Decoder-POM-Prefix.pch";
 				INFOPLIST_FILE = "Programmer Decoder-POM/Programmer Decoder-POM-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.1.6;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "AikoPras.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -418,11 +435,12 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Programmer Decoder-POM/Programmer Decoder-POM-Prefix.pch";
 				INFOPLIST_FILE = "Programmer Decoder-POM/Programmer Decoder-POM-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.1.6;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "AikoPras.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

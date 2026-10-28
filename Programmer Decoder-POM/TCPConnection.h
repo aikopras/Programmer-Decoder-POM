@@ -9,14 +9,17 @@
 #import <Foundation/Foundation.h>
 #import "DCCDecoder.h"
 #import "AppDelegate.h"
+#import "TCPSocket.h"
 
-@interface TCPConnectionsClass : NSObject <NSStreamDelegate>
+// 2026: NSStreamDelegate replaced by TCPSocketDelegate
+@interface TCPConnectionsClass : NSObject <TCPSocketDelegate>
 
 // The following methods should be used.
 // Note that flow-control between computer and Lenz system / decoder is in general necessary
 // Therefore first queue all CVs of interest, and subsequently initiate sending from queue
 - (void)openTcp;
 - (void)closeTcp;
+- (void)openTcpIfClosed;     // 2026: (re)opens the connection(s) that are closed; does nothing if all are open
 - (void)queuePomWritePacketForCV:(int)cvNumber;
 - (void)queuePomVerifyPacketForCV:(int)cvNumber;
 - (void)sendNextPomWritePacketFromQueue;
@@ -43,10 +46,9 @@ typedef enum
 
 // The following properties are for internal use, and should not be used outside
 @property (assign) AppDelegate        *topObject;
-@property (strong) NSInputStream      *iStreamPoM;
-@property (strong) NSOutputStream     *oStreamPoM;
-@property (strong) NSInputStream      *iStreamRS;
-@property (strong) NSOutputStream     *oStreamRS;
+@property (retain) TCPSocketClass     *socketPoM;      // 2026: replaces iStreamPoM and oStreamPoM
+@property (retain) TCPSocketClass     *socketRS;       // 2026: replaces iStreamRS and oStreamRS
+@property (assign) NSTimer            *keepAliveTimer; // 2026: sends the XpressNet Interface Status command
 @property (assign) NSString           *ipAddressForSending;
 @property (assign) NSString           *ipAddressForReceiving;
 @property (assign) Boolean            ipAddressForReceivingIsActive;
