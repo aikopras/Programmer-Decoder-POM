@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title> Decoder-POM Help CV common</title>
+  <meta name="AppleTitle" content="Decoder-POM Help" />
+  <meta name="AppleIcon" content="Decoder-POM Help/../../Icon.icns" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="noindex" />
+  <style type="text/css">
+    h1 {font: 21.0px Lucida Grande; margin:  0.0px 0.0px 18.0px 0.0px; font-weight: bold; color: rgb(102, 153, 204)}
+    h2 {font: 19.0px Lucida Grande; margin: 18.0px 0.0px  6.0px 0.0px; font-weight: bold; color: rgb(102, 153, 204)}
+    p  {font: 15.0px Lucida Grande; margin:  0.0px 0.0px  6.0px 6.0px;}
+    li {font: 15.0px Lucida Grande; margin:  0.0px 0.0px  0.0px 0.0px;}
+    ul {font: 15.0px Lucida Grande; margin:  0.0px 0.0px  0.0px 0.0px; list-style-type: disc}
+    table {border-collapse: collapse; margin: 6.0px 0.0px 12.0px 6.0px}
+    th {font: 13.0px Lucida Grande; font-weight: bold; text-align: left; vertical-align: top; padding: 3.0px 6.0px; border: 1px solid rgb(204, 204, 204); background-color: rgb(235, 235, 235)}
+    td {font: 13.0px Lucida Grande; text-align: left; vertical-align: top; padding: 3.0px 6.0px; border: 1px solid rgb(204, 204, 204)}
+    </style>
+</head>
+
+<body>
+<h1>CV values common to all decoders</h1>
+
+<p>The CVs below are used by all decoders. Old decoders use the OPENDECODER22 software; new decoders use the AP_DCC_Decoder_Core library. CVs marked <i>New decoders only</i> are not supported by old decoders: old decoders return 0 for these CVs and ignore new values.</p>
+
+<p>Default values can be restored with the DEFAULTS buttons, or for all CVs at once by writing 13 to CV8. A complete overview of the CVs of the new decoders, including default values and the CVs of decoders not described in this help, can be found on <a href="https://github.com/aikopras/AP_DCC_Decoder_Core/blob/main/src/CvValues/CvValues.md">GitHub</a>.</p>
+
+<table>
+  <tr><th>CV</th><th>Name</th><th>Access</th><th>Range</th><th>Description</th></tr>
+  <tr><td>1</td><td>myAddrL</td><td>R/W</td><td></td><td>Decoder address, low order bits. See <a href="addresses.html">Understanding Decoder Addresses</a></td></tr>
+  <tr><td>7</td><td>version</td><td>R</td><td></td><td>Software version</td></tr>
+  <tr><td>8</td><td>VID</td><td>R/W</td><td>13</td><td>Vendor ID (13 = 0x0D: DIY decoder). Writing 13 resets all CVs to their default values</td></tr>
+  <tr><td>9</td><td>myAddrH</td><td>R/W</td><td></td><td>Decoder address, high order bits. 128 (0x80) means: address not set</td></tr>
+  <tr><td>10</td><td>myRSAddr</td><td>R/W</td><td>1..128</td><td>RS-Bus address. 0 means: address not set</td></tr>
+  <tr><td>19</td><td>CmdStation</td><td>R/W</td><td>0..2</td><td>Command station: 0 = standard (such as Roco), 1 = Lenz, 2 = OpenDCC Z1 (new decoders only)</td></tr>
+  <tr><td>20</td><td>RSRetry</td><td>R/W</td><td>0..2</td><td>Number of additional transmissions of each RS-Bus feedback message (also called RSFEC)</td></tr>
+  <tr><td>21</td><td>SkipUnEven</td><td>R/W</td><td>0..1</td><td>If 1: only decoder addresses 2, 4, 6 ... are used</td></tr>
+  <tr><td>22</td><td>RSParity</td><td>R/W</td><td>0..2</td><td>Reaction to a RS-Bus parity error: 0 = no reaction, 1 = retransmit if data was just transmitted, 2 = always retransmit. <i>New decoders only</i></td></tr>
+  <tr><td>23</td><td>Search</td><td>R/W</td><td>0..1</td><td>If 1: the decoder LED blinks. Not stored; 0 after a restart</td></tr>
+  <tr><td>24</td><td>RSPulsCount</td><td>R/W</td><td>0..2</td><td>Reaction to a RS-Bus pulse count error: same values as CV22. <i>New decoders only</i></td></tr>
+  <tr><td>25</td><td>Restart</td><td>W</td><td></td><td>Writing a value other than 0 restarts the decoder, so that new CV values take effect</td></tr>
+  <tr><td>26</td><td>DccQuality</td><td>R</td><td>0..255</td><td>Number of DCC checksum errors since the last restart</td></tr>
+  <tr><td>27</td><td>DecType</td><td>R</td><td></td><td>Decoder type. See the pages of the individual decoders</td></tr>
+  <tr><td>28</td><td>RailCom</td><td>R</td><td>0</td><td>RailCom (BiDi) is not supported</td></tr>
+  <tr><td>29</td><td>Config</td><td>R</td><td></td><td>Accessory decoder configuration (similar to CV29 of the NMRA)</td></tr>
+  <tr><td>30</td><td>VID_2</td><td>R</td><td>13</td><td>Second vendor ID, to recognise decoders by Aiko Pras</td></tr>
+  <tr><td>31</td><td>ParityErrors</td><td>R</td><td>0..255</td><td>Number of RS-Bus parity errors since the last restart. <i>New decoders only</i></td></tr>
+  <tr><td>32</td><td>PulseErrors</td><td>R</td><td>0..255</td><td>Number of RS-Bus pulse count errors since the last restart. <i>New decoders only</i></td></tr>
+</table>
+
+</body>
+
+</html>

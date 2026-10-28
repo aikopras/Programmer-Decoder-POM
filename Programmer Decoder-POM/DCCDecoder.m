@@ -67,10 +67,11 @@ uint8_t cvStore[MAX_CVS + 1];          // Array is indexed by CV number, and hol
 
 - (NSString *)DecoderType{
   NSString *string = @"unknown";
-  if      (cvStore[DecType] == 16)  {string = @"Swith decoder";}
-  else if (cvStore[DecType] == 17)  {string = @"Swith decoder";}
+  if      (cvStore[DecType] == 16)  {string = @"Switch decoder";}
+  else if (cvStore[DecType] == 17)  {string = @"Switch decoder";}
   else if (cvStore[DecType] == 20)  {string = @"Servo-2 Decoder";}
   else if (cvStore[DecType] == 21)  {string = @"Servo-3 Decoder";}
+  else if (cvStore[DecType] == 22)  {string = @"Servo-6 Decoder";}   // 2026
   else if (cvStore[DecType] == 24)  {string = @"Lift Decoder";}
   else if (cvStore[DecType] == 32)  {string = @"Relays decoder";}
   else if (cvStore[DecType] == 33)  {string = @"Relays decoder";}

@@ -55,6 +55,10 @@
 //
 // RS-Bus tab properties
 @synthesize comboRsFec                 = _comboRsFec;
+@synthesize comboRsParity              = _comboRsParity;
+@synthesize comboRsPulsCount           = _comboRsPulsCount;
+@synthesize parityErrorsText           = _parityErrorsText;
+@synthesize pulseErrorsText            = _pulseErrorsText;
 @synthesize buttonRsBusTabSet          = _buttonRsBusTabSet;
 //
 // Initialise tab properties
@@ -84,14 +88,17 @@
 #define CmdStation    19
 #define RSRetry       20
 #define SkipEven      21
+#define RSParity      22    // 2026
 #define Search        23
-#define PoMStart      24
+#define RSPulsCount   24    // 2026
 #define Restart       25
 #define DccQuality    26
 #define DecType       27
 #define BiDi          28
 #define Config        29
 #define VID_2         30
+#define ParityErrors  31    // 2026: read-only
+#define PulseErrors   32    // 2026: read-only
 #define SendFB        33
 #define AlwaysAct     34
 
@@ -208,12 +215,11 @@
   uint16_t cvNumber;
   [_tcpConnectionsObject queuePomVerifyPacketForCV:1];
   for (cvNumber= 3; cvNumber <= 10; cvNumber++) [_tcpConnectionsObject queuePomVerifyPacketForCV:cvNumber];
-  for (cvNumber=19; cvNumber <= 21; cvNumber++) [_tcpConnectionsObject queuePomVerifyPacketForCV:cvNumber];
-  for (cvNumber=23; cvNumber <= 30; cvNumber++) [_tcpConnectionsObject queuePomVerifyPacketForCV:cvNumber];
-  for (cvNumber=33; cvNumber <= 34; cvNumber++) [_tcpConnectionsObject queuePomVerifyPacketForCV:cvNumber];
+  for (cvNumber=19; cvNumber <= 34; cvNumber++) [_tcpConnectionsObject queuePomVerifyPacketForCV:cvNumber]; // 2026: incl. CV22, 31, 32
   [_tcpConnectionsObject sendNextPomVerifyPacketFromQueue];
   // Remove possible red color from SET buttons
   [self colorGetButtonControlTab:0];
+  [self colorGetButtonRsBusTab:0];
   [self colorGetButtonSwitchTab:0];
   [self colorGetButtonIniTab:0];
 }
@@ -264,6 +270,7 @@
   if (newValue < 0) {newValue = 0;}
   if (newValue > 2) {newValue = 2;}
   [_dccDecoderObject setCv:RSRetry withValue:newValue];
+  [_comboRsFec setIntValue:newValue];   // 2026: RSRetry is also shown on the RS-Bus tab
   [self colorGetButtonControlTab:1];
 }
 
@@ -283,8 +290,11 @@
   if ([newString isEqualToString:@"switch plus"]) {newValue = 17;}
   if ([newString isEqualToString:@"servo-2"])     {newValue = 20;}
   if ([newString isEqualToString:@"servo-3"])     {newValue = 21;}
+  if ([newString isEqualToString:@"servo-6"])     {newValue = 22;}  // 2026
+  if ([newString isEqualToString:@"lift"])        {newValue = 24;}  // 2026
   if ([newString isEqualToString:@"relays-4"])    {newValue = 32;}
   if ([newString isEqualToString:@"relays-16"])   {newValue = 33;}
+  if ([newString isEqualToString:@"function"])    {newValue = 64;}  // 2026
   if ([newString isEqualToString:@"safety"])      {newValue = 128;}
   [_dccDecoderObject setCv:DecType withValue:newValue];
   [self colorGetButtonControlTab:1];
@@ -333,6 +343,7 @@
   if ([_dccDecoderObject getCv:DecType] == 17)  newString = @"switch plus";
   if ([_dccDecoderObject getCv:DecType] == 20)  newString = @"servo-2";
   if ([_dccDecoderObject getCv:DecType] == 21)  newString = @"servo-3";
+  if ([_dccDecoderObject getCv:DecType] == 22)  newString = @"servo-6";   // 2026
   if ([_dccDecoderObject getCv:DecType] == 24)  newString = @"lift";
   if ([_dccDecoderObject getCv:DecType] == 32)  newString = @"relays-4";
   if ([_dccDecoderObject getCv:DecType] == 33)  newString = @"relays-16";
@@ -355,12 +366,65 @@
   if (newValue < 0) {newValue = 0;}
   if (newValue > 2) {newValue = 2;}
   [_dccDecoderObject setCv:RSRetry withValue:newValue];
+  [_comboRsRetry setIntValue:newValue];   // 2026: RSRetry is also shown on the Control tab
   [self colorGetButtonRsBusTab:1];
 }
 
+- (IBAction)selectedRsParity:(id)sender {
+  uint8_t newValue = [sender intValue];
+  if (newValue < 0) {newValue = 0;}
+  if (newValue > 2) {newValue = 2;}
+  [_dccDecoderObject setCv:RSParity withValue:newValue];
+  [self colorGetButtonRsBusTab:1];
+}
+
+- (IBAction)selectedRsPulsCount:(id)sender {
+  uint8_t newValue = [sender intValue];
+  if (newValue < 0) {newValue = 0;}
+  if (newValue > 2) {newValue = 2;}
+  [_dccDecoderObject setCv:RSPulsCount withValue:newValue];
+  [self colorGetButtonRsBusTab:1];
+}
+
+- (IBAction)pushedRsBusTabDefaults:(id)sender {
+  // Default values are taken from CvValues.cpp (AP_DCC_Decoder_Core)
+  [self readLastInputFromTextFields];
+  [_dccDecoderObject setCv:RSRetry     withValue:0];  // No retransmissions
+  [_dccDecoderObject setCv:RSParity    withValue:1];  // Retransmit if data was just transmitted
+  [_dccDecoderObject setCv:RSPulsCount withValue:2];  // Always retransmit
+  [self colorGetButtonRsBusTab:1];
+  [self updateTabs];
+}
+
+- (IBAction)pushedRsBusTabGet:(id)sender {
+  [self readLastInputFromTextFields];
+  [_tcpConnectionsObject queuePomVerifyPacketForCV:RSRetry];
+  [_tcpConnectionsObject queuePomVerifyPacketForCV:RSParity];
+  [_tcpConnectionsObject queuePomVerifyPacketForCV:RSPulsCount];
+  [_tcpConnectionsObject queuePomVerifyPacketForCV:ParityErrors];
+  [_tcpConnectionsObject queuePomVerifyPacketForCV:PulseErrors];
+  [_tcpConnectionsObject sendNextPomVerifyPacketFromQueue];
+  [self colorGetButtonRsBusTab:0];
+}
+
+- (IBAction)pushedRsBusTabSet:(id)sender {
+  // ParityErrors and PulseErrors are read-only, and are therefore not written
+  [self readLastInputFromTextFields];
+  [_tcpConnectionsObject queuePomWritePacketForCV:RSRetry];
+  [_tcpConnectionsObject queuePomWritePacketForCV:RSParity];
+  [_tcpConnectionsObject queuePomWritePacketForCV:RSPulsCount];
+  [_tcpConnectionsObject sendNextPomWritePacketFromQueue];
+  [self colorGetButtonRsBusTab:0];
+}
+
 - (void) updateRsBusTab {
-  // RSFEC
+  // RSRetry (same as RSFEC)
   [_comboRsFec setIntValue:[_dccDecoderObject getCv:RSRetry]];
+  // 2026: RSParity, RSPulsCount and the (read-only) error counters
+  [_comboRsParity    setIntValue:[_dccDecoderObject getCv:RSParity]];
+  [_comboRsPulsCount setIntValue:[_dccDecoderObject getCv:RSPulsCount]];
+  [_parityErrorsText setIntValue:[_dccDecoderObject getCv:ParityErrors]];
+  [_pulseErrorsText  setIntValue:[_dccDecoderObject getCv:PulseErrors]];
 }
 
 - (void)colorGetButtonRsBusTab:(int)isRed {

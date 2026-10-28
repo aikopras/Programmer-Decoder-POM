@@ -30,7 +30,7 @@
     
     <h2>Decoder address</h2>
     <ul>
-      <li> A single decoder is generally able to address four outputs. 
+      <li> A single decoder is generally able to address four outputs.</li>
       <li> Decoder addresses used by this program range from 0..255 (which is also the range supported by XPressNet)</li>
       <li> Although there is on the web some confusion regarding the exact relationship between output addresses and decoder addresses, the convention used by this program (and OPENDECODER 2.2) is that output addresses 1..4 map upon decoder address 0, 5..8 -> 1, 9..12 -> 2, 1021..1024 -> 255.</li>
       <li> The decoder address is stored in EEPROM. Two CVs are used for this purpose: CV1 (lower 6 bits) and CV9 (higher 3 bits).</li>
@@ -68,7 +68,6 @@
       <li> For sending normal feedback massages, decoders use RS-Bus addresses in the range 1..127.</li>
       <li> RS-Bus address 128 is used for sending special feedback messages to react on PoM Verify messages, which are send by this program.</li>
       <li> Also decoders with an invalid RS-Bus address will use RS-Bus address 128 to react on PoM Verify messages. In this way also decoders with higher decoder addresses than 128 can send the values of their CVs to this program.</li>
-      <li> To instruct a decoder to switch to PoM-mode (and thus use RS-Bus address 128), a special CV should be set before starting PoM. This program will automatically set this CV once the user of this program enters a new (switch) address. By restarting the decoder or selecting another decoder, PoM-mode will be released and the decoder will continue using its normal RS-Bus address for sending normal feedback messages.</li>
     </ul>
 
     

@@ -36,18 +36,18 @@
     
     <h2>Addresses within DCC packets</h2>
     <ul>
-      <li> Within DCC packets address bits are divided over two bytes: the first address byte contains the low-order 6 bits, the second address byte contains the high order 3 bits (in Lenz environment only 2 bits)
+      <li> Within DCC packets address bits are divided over two bytes: the first address byte contains the low-order 6 bits, the second address byte contains the high order 3 bits (in Lenz environment only 2 bits)</li>
       <li> It seems that different manufacturers use different conventions to code the first decoder address within DCC packets.</li>
       <ol>
         <li>Most Command Stations, including the Roco 10764, start with 0 (thus <b>DCC address = Xpressnet address</b>).</li>
         <li>The Lenz LZV100 starts with 1 (thus <b>DCC address = Xpressnet address + 1</b>).</li>
       </ol>
-      <li> The Lenz LZV100 behaves strange if the address is exactly 0, 64, 128 or 192. In such cases, the address seems to be 64 too low. </i>
+      <li> The Lenz LZV100 behaves strange if the address is exactly 0, 64, 128 or 192. In such cases, the address seems to be 64 too low. </li>
       <li> According to the NMRA specifications, decoder addresses could range till 511 (basic accessory decoders). In case of NMRA:</li>
-      <UL>
+      <ul>
         <li> Decoder address 0 should be reserved.</li>
         <li> Decoder address 511 represents the broadcast address (basic accessory decoders) and 2047 (extended accessory decoders).</li>
-      </UL>
+      </ul>
       <li> Note that Xpressnet systems are unable to use the entire address range that is allowed according to the NMRA specs.</li>
     </ul>
 

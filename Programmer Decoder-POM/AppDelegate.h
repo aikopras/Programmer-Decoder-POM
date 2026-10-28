@@ -117,11 +117,21 @@
 // ************************************************ RS-Bus TAB ************************************************
 // ************************************************************************************************************
 @property (assign) IBOutlet NSComboBox *comboRsFec;
+@property (assign) IBOutlet NSComboBox *comboRsParity;        // 2026
+@property (assign) IBOutlet NSComboBox *comboRsPulsCount;     // 2026
+@property (assign) IBOutlet NSTextField *parityErrorsText;    // 2026: read-only
+@property (assign) IBOutlet NSTextField *pulseErrorsText;     // 2026: read-only
 @property (assign) IBOutlet NSButton *buttonRsBusTabDefaults;
 @property (assign) IBOutlet NSButton *buttonRsBusTabGet;
 @property (assign) IBOutlet NSButton *buttonRsBusTabSet;
 
 -(IBAction)selectedRsFec:(id)sender;
+-(IBAction)selectedRsParity:(id)sender;
+-(IBAction)selectedRsPulsCount:(id)sender;
+
+- (IBAction)pushedRsBusTabDefaults:(id)sender;
+- (IBAction)pushedRsBusTabGet:(id)sender;
+- (IBAction)pushedRsBusTabSet:(id)sender;
 
 // ************************************************************************************************************
 // ********************************************** INITIALISE TAB **********************************************
