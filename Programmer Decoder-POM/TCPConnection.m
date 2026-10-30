@@ -57,15 +57,14 @@
 // ******************************************************* Local C type definitions and declarations *************************************************
 // ***************************************************************************************************************************************************
 #define POM_OFFSET 7000                   // First PoM address starts from this address
-//#define RS_BUS_TIMEOUT 0.25               // timeout, in seconds, to receive a RS-Bus feedback response to a previous PoM verify message
-#define RS_BUS_TIMEOUT 2.5               // timeout, in seconds, to receive a RS-Bus feedback response to a previous PoM verify message
+#define RS_BUS_TIMEOUT 1.0                // timeout, in seconds, to receive a RS-Bus feedback response to a previous PoM verify message
 #define POM_TIMEOUT 0.2                   // timeout, to receive a "Request Forwarded to Master Station" response to a previous PoM write message
 #define POM_WRITE_DELAY 0.05              // Extra delay we introduce between PoM write requests
 #define CONNECT_TIMEOUT 3                 // 2026: Seconds to wait for a Lenz interface before giving up
 #define KEEPALIVE_INTERVAL 10             // 2026: Seconds between two keep-alive (Interface Status) commands
 #define KEEPALIVE_TIMEOUT 5.0             // 2026: Seconds to wait for its answer (normal command timeout of the interface)
-//#define POM_WRITE_DELAY 0.4              // Extra delay we introduce between PoM write requests
-                                         //
+//#define POM_WRITE_DELAY 0.4             // Extra delay we introduce between PoM write requests
+                                          //
                                           // Declarations below should preferable not be changed
 #define MAX_CVS 512                       // Number of CVs we support. Note that we map 513->1 etc.
 #define MAX_INBUFFER 32                   // max. TCP input buffer size for the LENZ interface(s)

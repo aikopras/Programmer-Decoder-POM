@@ -26,8 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2416F9EE187B2376004A158B /* Decoder-POMHelp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Decoder-POMHelp"; sourceTree = "<group>"; };
 		240DDEE52E8D61DA00F0E6A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2416F9EE187B2376004A158B /* Decoder-POMHelp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Decoder-POMHelp"; sourceTree = "<group>"; };
 		2422437C1531CF4200089699 /* TCPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = TCPConnection.m; sourceTree = "<group>"; tabWidth = 4; };
 		2422437D1531CF4200089699 /* TCPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPConnection.h; sourceTree = "<group>"; };
 		2422437E1531CF4200089699 /* DCCDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = DCCDecoder.m; sourceTree = "<group>"; tabWidth = 2; };
@@ -40,7 +40,6 @@
 		24553AA716F123CA00EBFFD1 /* PoM-Decoder-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "PoM-Decoder-icon.icns"; sourceTree = "<group>"; };
 		24553AA816F123CA00EBFFD1 /* PoM-Decoder-icon.key */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoM-Decoder-icon.key"; sourceTree = "<group>"; };
 		24553AA916F123CA00EBFFD1 /* PoM-Decoder-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PoM-Decoder-icon.png"; sourceTree = "<group>"; };
-		24811A8430928A8C0065D98C /* CV-common.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "CV-common.html"; sourceTree = "<group>"; };
 		246BA96A16EBE389005AA872 /* CV-switch.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "CV-switch.html"; sourceTree = "<group>"; };
 		246BA96B16EBE389005AA872 /* help.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = help.css; sourceTree = "<group>"; };
 		246BA96C16EBE389005AA872 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		2479A8351531CEBB00B93E37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2479A8371531CEBB00B93E37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2479A8381531CEBB00B93E37 /* AppDelegate.m */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		24811A8430928A8C0065D98C /* CV-common.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "CV-common.html"; sourceTree = "<group>"; };
 		24813D15309244C1004D4847 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
 		24813D1930924A36004D4847 /* TCPSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCPSocket.h; sourceTree = "<group>"; };
 		24813D1A30924A54004D4847 /* TCPSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCPSocket.m; sourceTree = "<group>"; };
@@ -404,7 +404,7 @@
 				GCC_PREFIX_HEADER = "Programmer Decoder-POM/Programmer Decoder-POM-Prefix.pch";
 				INFOPLIST_FILE = "Programmer Decoder-POM/Programmer Decoder-POM-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "AikoPras.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -422,7 +422,7 @@
 				GCC_PREFIX_HEADER = "Programmer Decoder-POM/Programmer Decoder-POM-Prefix.pch";
 				INFOPLIST_FILE = "Programmer Decoder-POM/Programmer Decoder-POM-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "AikoPras.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
