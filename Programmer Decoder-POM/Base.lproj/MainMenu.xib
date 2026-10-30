@@ -453,6 +453,15 @@
                                     <rect key="frame" x="10" y="33" width="825" height="550"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
+                                        <box autoresizesSubviews="NO" fixedFrame="YES" borderType="line" title="Direct CV operation" id="1102">
+                                            <rect key="frame" x="66" y="331" width="359" height="169"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <view key="contentView" id="wel-Nw-MeQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="157"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <font key="titleFont" metaFont="systemBold"/>
+                                        </box>
                                         <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" id="616">
                                             <rect key="frame" x="193" y="433" width="61" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -546,15 +555,6 @@
                                                         </textFieldCell>
                                                     </textField>
                                                 </subviews>
-                                            </view>
-                                            <font key="titleFont" metaFont="systemBold"/>
-                                        </box>
-                                        <box autoresizesSubviews="NO" fixedFrame="YES" borderType="line" title="Direct CV operation" id="1102">
-                                            <rect key="frame" x="66" y="331" width="359" height="169"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView" id="wel-Nw-MeQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="359" height="157"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
                                             <font key="titleFont" metaFont="systemBold"/>
                                         </box>
