@@ -36,6 +36,9 @@ Open `Programmer Decoder-POM.xcodeproj` in Xcode 26 or later. The Release config
 The TCP connections are handled by `TCPSocketClass` (`TCPSocket.h` / `TCPSocket.m`), which is based on Apple's Network framework. This class contains no DCC, RS-Bus or Lenz specific code; the same class is used in [OSX-DCC-Monitor](https://github.com/aikopras/OSX-DCC-Monitor).
 
 ## Version history ##
+**2.2** (October 2026)
+- RS-Bus time-out changed to 1 second.
+
 **2.1** (October 2026)
 - RS-Bus tab extended: RSParity (CV22) and RSPulsCount (CV24) define how the decoder reacts to RS-Bus parity and pulse count errors. The number of errors since the last decoder restart is shown as well: ParityErrors (CV31) and PulseErrors (CV32), both read-only. Decoders based on the older OpenDecoder22 software do not support these CVs; for these decoders the values are shown as 0.
 - On the RS-Bus tab RSFEC is now called RSRetry (CV20), like on the Control tab; both tabs show the same value. The GET, DEFAULTS and SET buttons of the RS-Bus tab now act on the RS-Bus CVs.
