@@ -11,7 +11,7 @@
 @class DCCDecoderClass;
 @class TCPConnectionsClass;
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSTabViewDelegate>
 
 
 // ************************************************************************************************************
@@ -42,6 +42,7 @@
 
 // Declare the properties/methods common to all decoders
 @property (assign) IBOutlet NSTextField *address;
+@property (assign) IBOutlet NSButton *buttonSelect;         // 2026: disabled during a live setting of a servo
 @property (assign) IBOutlet NSTextField *DecoderVendor;
 @property (assign) IBOutlet NSTextField *DecoderVersion;
 @property (assign) IBOutlet NSTextField *DecoderType;
@@ -132,6 +133,103 @@
 - (IBAction)pushedRsBusTabDefaults:(id)sender;
 - (IBAction)pushedRsBusTabGet:(id)sender;
 - (IBAction)pushedRsBusTabSet:(id)sender;
+
+// ************************************************************************************************************
+// ************************************************* LIFT TAB *************************************************
+// ************************************************************************************************************
+// 2026: CV33..36 of the lift decoder (DecType = 24)
+@property (assign) IBOutlet NSComboBox *comboStartHoming;     // CV33
+@property (assign) IBOutlet NSComboBox *comboIrDetect;        // CV34
+@property (assign) IBOutlet NSComboBox *comboLcdDisplay;      // CV35
+@property (assign) IBOutlet NSComboBox *comboSerialLine;      // CV36
+@property (assign) IBOutlet NSButton *buttonLiftTabDefaults;
+@property (assign) IBOutlet NSButton *buttonLiftTabGet;
+@property (assign) IBOutlet NSButton *buttonLiftTabSet;
+
+- (IBAction)selectedStartHoming:(id)sender;
+- (IBAction)selectedIrDetect:(id)sender;
+- (IBAction)selectedLcdDisplay:(id)sender;
+- (IBAction)selectedSerialLine:(id)sender;
+
+- (IBAction)pushedLiftTabDefaults:(id)sender;
+- (IBAction)pushedLiftTabGet:(id)sender;
+- (IBAction)pushedLiftTabSet:(id)sender;
+
+// ************************************************************************************************************
+// ************************************************ SERVO TABS ************************************************
+// ************************************************************************************************************
+// 2026: Three tabs for the servo decoders (DecType = 20, 21 and 22)
+// SERVO tab: general decoder CVs
+@property (assign) IBOutlet NSComboBox *comboSkipUnEven;          // CV21
+@property (assign) IBOutlet NSComboBox *comboSwitchCount;         // CV35
+@property (assign) IBOutlet NSComboBox *comboSwitchType;          // CV36
+@property (assign) IBOutlet NSTextField *textServosOnBoard;       // CV64 (read only)
+@property (assign) IBOutlet NSButton *buttonServoTabDefaults;
+@property (assign) IBOutlet NSButton *buttonServoTabGet;
+@property (assign) IBOutlet NSButton *buttonServoTabSet;
+
+- (IBAction)selectedServoTabValue:(id)sender;
+- (IBAction)pushedServoTabDefaults:(id)sender;
+- (IBAction)pushedServoTabGet:(id)sender;
+- (IBAction)pushedServoTabSet:(id)sender;
+
+// SERVO POSITIONS tab: live setting of min, max and speed (CV62 and CV63)
+@property (assign) IBOutlet NSPopUpButton *popupServoPositions;
+@property (assign) IBOutlet NSButton *radioServoMin;
+@property (assign) IBOutlet NSButton *radioServoMax;
+@property (assign) IBOutlet NSButton *radioServoSpeed;
+@property (assign) IBOutlet NSSlider *sliderServoMin;
+@property (assign) IBOutlet NSSlider *sliderServoMax;
+@property (assign) IBOutlet NSSlider *sliderServoSpeed;
+@property (assign) IBOutlet NSTextField *fieldServoMin;
+@property (assign) IBOutlet NSTextField *fieldServoMax;
+@property (assign) IBOutlet NSTextField *fieldServoSpeed;
+@property (assign) IBOutlet NSStepper *stepperServoMin;
+@property (assign) IBOutlet NSStepper *stepperServoMax;
+@property (assign) IBOutlet NSStepper *stepperServoSpeed;
+@property (assign) IBOutlet NSTextField *textServoStatus;
+@property (assign) IBOutlet NSButton *buttonServoStart;
+@property (assign) IBOutlet NSButton *buttonServoMiddle;
+@property (assign) IBOutlet NSButton *buttonServoDefaults;
+@property (assign) IBOutlet NSButton *buttonServoCancel;
+@property (assign) IBOutlet NSButton *buttonServoDone;
+
+- (IBAction)selectedServo:(id)sender;            // Used by the popups of the SERVO POSITIONS and SERVO CVS tabs
+- (IBAction)selectedServoSetting:(id)sender;     // Radio buttons Min, Max, Speed
+- (IBAction)servoSliderMoved:(id)sender;
+- (IBAction)servoFieldEntered:(id)sender;
+- (IBAction)servoStepperClicked:(id)sender;
+- (IBAction)pushedServoStart:(id)sender;
+- (IBAction)pushedServoMiddle:(id)sender;
+- (IBAction)pushedServoDefaults:(id)sender;
+- (IBAction)pushedServoCancel:(id)sender;
+- (IBAction)pushedServoDone:(id)sender;
+
+// SERVO CVS tab: the other servo specific CVs (offset 4..17)
+@property (assign) IBOutlet NSPopUpButton *popupServoCvs;
+@property (assign) IBOutlet NSComboBox *comboCurveA;               // offset 4
+@property (assign) IBOutlet NSButton *checkCurveAReverse;          // offset 4, bit 7
+@property (assign) IBOutlet NSComboBox *comboCurveB;               // offset 5
+@property (assign) IBOutlet NSButton *checkCurveBReverse;          // offset 5, bit 7
+@property (assign) IBOutlet NSComboBox *comboInvertServoDir;       // offset 7
+@property (assign) IBOutlet NSComboBox *comboInvertRelais;         // offset 8 (servo-2 board only)
+@property (assign) IBOutlet NSComboBox *comboServoType;            // offset 9
+@property (assign) IBOutlet NSComboBox *comboPulseStartUpValue;    // offset 10
+@property (assign) IBOutlet NSTextField *fieldPowerStartUpDelay;   // offset 11
+@property (assign) IBOutlet NSComboBox *comboIdlePulseDefault;     // offset 12
+@property (assign) IBOutlet NSTextField *fieldPulseOnBefore;       // offset 13
+@property (assign) IBOutlet NSTextField *fieldPulseOffAfter;       // offset 14
+@property (assign) IBOutlet NSComboBox *comboPowerWhenIdle;        // offset 15
+@property (assign) IBOutlet NSTextField *fieldPowerOnBefore;       // offset 16
+@property (assign) IBOutlet NSTextField *fieldPowerOffAfter;       // offset 17
+@property (assign) IBOutlet NSButton *buttonServoCvsTabDefaults;
+@property (assign) IBOutlet NSButton *buttonServoCvsTabGet;
+@property (assign) IBOutlet NSButton *buttonServoCvsTabSet;
+
+- (IBAction)selectedServoCv:(id)sender;
+- (IBAction)pushedServoCvsTabDefaults:(id)sender;
+- (IBAction)pushedServoCvsTabGet:(id)sender;
+- (IBAction)pushedServoCvsTabSet:(id)sender;
 
 // ************************************************************************************************************
 // ********************************************** INITIALISE TAB **********************************************

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title> Decoder-POM Help CV lift</title>
+  <meta name="AppleTitle" content="Decoder-POM Help" />
+  <meta name="AppleIcon" content="Decoder-POM Help/../../Icon.icns" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="noindex" />
+  <style type="text/css">
+    h1 {font: 21.0px Lucida Grande; margin:  0.0px 0.0px 18.0px 0.0px; font-weight: bold; color: rgb(102, 153, 204)}
+    h2 {font: 19.0px Lucida Grande; margin: 18.0px 0.0px  6.0px 0.0px; font-weight: bold; color: rgb(102, 153, 204)}
+    p  {font: 15.0px Lucida Grande; margin:  0.0px 0.0px  6.0px 6.0px;}
+    li {font: 15.0px Lucida Grande; margin:  0.0px 0.0px  0.0px 0.0px;}
+    ul {font: 15.0px Lucida Grande; margin:  0.0px 0.0px  0.0px 0.0px; list-style-type: disc}
+    table {border-collapse: collapse; margin: 6.0px 0.0px 12.0px 6.0px}
+    th {font: 13.0px Lucida Grande; font-weight: bold; text-align: left; vertical-align: top; padding: 3.0px 6.0px; border: 1px solid rgb(204, 204, 204); background-color: rgb(235, 235, 235)}
+    td {font: 13.0px Lucida Grande; text-align: left; vertical-align: top; padding: 3.0px 6.0px; border: 1px solid rgb(204, 204, 204)}
+    </style>
+</head>
+
+<body>
+<h1>CV values used by the lift decoder</h1>
+
+<p>In addition to the <a href="CV-common.html">CVs common to all decoders</a>, the lift decoder uses the CVs below. These CVs can be modified on the Lift tab, which is only shown if the selected decoder is a lift decoder. After SELECT, these CVs are read together with the common CVs.</p>
+
+<h2>Decoder type</h2>
+<table>
+  <tr><th>DecType (CV27)</th><th>Decoder Type (Control tab)</th><th>Decoder</th></tr>
+  <tr><td>24</td><td>lift</td><td>Lift decoder</td></tr>
+</table>
+
+<h2>CVs</h2>
+<table>
+  <tr><th>CV</th><th>Name</th><th>Access</th><th>Range</th><th>Default</th><th>Description</th></tr>
+  <tr><td>33</td><td>StartHoming</td><td>R/W</td><td>0..1</td><td>1</td><td>If 1: the decoder performs a homing cycle at start-up, so the lift moves to a defined position. Takes effect after a restart of the decoder</td></tr>
+  <tr><td>34</td><td>IR_Detect</td><td>R/W</td><td>0..1</td><td>1</td><td>If 1: the IR-sensors are checked before the lift starts moving. If a train blocks an IR-beam, the lift will not move. 0 may be needed for testing, or if no IR-Sensor board is connected</td></tr>
+  <tr><td>35</td><td>LCD_Display</td><td>R/W</td><td>0..1</td><td>0</td><td>If 1: the LCD display is used. Since writing to the LCD takes quite some time, it may interfere with RS-Bus feedback and other time critical functions. Intended for testing</td></tr>
+  <tr><td>36</td><td>Serial_Line</td><td>R/W</td><td>0..2</td><td>0</td><td>Serial monitor interface. 0 (Off): switched off. 1 (On): input from the serial line is copied to the GRBL processor, and the lift position is shown. 2 (Details): in addition, all output of the GRBL processor is shown. Needed to make GRBL configuration changes. Switching on (from 0 to 1 or 2) takes effect after a restart of the decoder</td></tr>
+</table>
+
+<p>A restart can be done with the RESTART button in the main window. The documentation of the lift decoder can be found on <a href="https://github.com/aikopras/Lift_Vitrine">GitHub</a>.</p>
+</body>
+
+</html>
