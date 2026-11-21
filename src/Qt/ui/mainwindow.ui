@@ -1,0 +1,456 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1070</width>
+    <height>671</height>
+   </rect>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label1">
+    <property name="geometry">
+     <rect>
+      <x>33</x>
+      <y>69</y>
+      <width>154</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Switch (output) address</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="connectionStatus">
+    <property name="geometry">
+     <rect>
+      <x>583</x>
+      <y>608</y>
+      <width>442</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>connection status</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="Line" name="line2">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>598</y>
+      <width>1042</width>
+      <height>4</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="progressIndicator">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>608</y>
+      <width>46</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>0</number>
+    </property>
+    <property name="textVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="address">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>94</y>
+      <width>56</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSelect">
+    <property name="geometry">
+     <rect>
+      <x>66</x>
+      <y>127</y>
+      <width>86</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SELECT</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="receiveStatus">
+    <property name="geometry">
+     <rect>
+      <x>412</x>
+      <y>642</y>
+      <width>613</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Receive status</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ledOn">
+    <property name="geometry">
+     <rect>
+      <x>63</x>
+      <y>339</y>
+      <width>92</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>LED ON</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonRestart">
+    <property name="geometry">
+     <rect>
+      <x>61</x>
+      <y>554</y>
+      <width>96</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RESTART</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label3">
+    <property name="geometry">
+     <rect>
+      <x>65</x>
+      <y>318</y>
+      <width>90</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Find decoder</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label4">
+    <property name="geometry">
+     <rect>
+      <x>58</x>
+      <y>533</y>
+      <width>104</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Restart decoder</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="Line" name="line5">
+    <property name="geometry">
+     <rect>
+      <x>17</x>
+      <y>308</y>
+      <width>174</width>
+      <height>5</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line6">
+    <property name="geometry">
+     <rect>
+      <x>17</x>
+      <y>519</y>
+      <width>174</width>
+      <height>5</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label7">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>191</y>
+      <width>54</width>
+      <height>14</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Vendor:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label8">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>212</y>
+      <width>56</width>
+      <height>14</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Version:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label9">
+    <property name="geometry">
+     <rect>
+      <x>25</x>
+      <y>231</y>
+      <width>39</width>
+      <height>14</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Type:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="DecoderVendor">
+    <property name="geometry">
+     <rect>
+      <x>61</x>
+      <y>191</y>
+      <width>149</width>
+      <height>14</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string />
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="DecoderVersion">
+    <property name="geometry">
+     <rect>
+      <x>61</x>
+      <y>212</y>
+      <width>149</width>
+      <height>14</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string />
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="DecoderType">
+    <property name="geometry">
+     <rect>
+      <x>61</x>
+      <y>231</y>
+      <width>149</width>
+      <height>14</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string />
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="DecoderSubType">
+    <property name="geometry">
+     <rect>
+      <x>61</x>
+      <y>247</y>
+      <width>144</width>
+      <height>14</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string />
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label10">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>276</y>
+      <width>44</width>
+      <height>14</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Errors:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="DecoderErrors">
+    <property name="geometry">
+     <rect>
+      <x>61</x>
+      <y>277</y>
+      <width>43</width>
+      <height>14</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Label</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label11">
+    <property name="geometry">
+     <rect>
+      <x>142</x>
+      <y>99</y>
+      <width>54</width>
+      <height>14</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1..1024</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sendStatus">
+    <property name="geometry">
+     <rect>
+      <x>412</x>
+      <y>625</y>
+      <width>613</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Send status</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="windowTabs">
+    <property name="geometry">
+     <rect>
+      <x>208</x>
+      <y>6</y>
+      <width>845</width>
+      <height>596</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources />
+ <connections />
+</ui>

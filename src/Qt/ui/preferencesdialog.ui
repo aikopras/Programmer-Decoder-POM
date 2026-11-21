@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui version="4.0">
+ <class>PreferencesDialog</class>
+ <widget class="QDialog" name="PreferencesDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>697</width>
+    <height>291</height>
+   </rect>
+  </property>
+  <widget class="QLabel" name="label1">
+   <property name="geometry">
+    <rect>
+     <x>92</x>
+     <y>51</y>
+     <width>258</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>IP address for sending PoM messages:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label2">
+   <property name="geometry">
+    <rect>
+     <x>17</x>
+     <y>127</y>
+     <width>333</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>IP address for receiving RS-bus feedback messages:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label3">
+   <property name="geometry">
+    <rect>
+     <x>138</x>
+     <y>5</y>
+     <width>344</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Settings for Lenz LAN-USB Interface(s)</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ipAddressForSending">
+   <property name="geometry">
+    <rect>
+     <x>359</x>
+     <y>49</y>
+     <width>241</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string />
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label4">
+   <property name="geometry">
+    <rect>
+     <x>356</x>
+     <y>79</y>
+     <width>171</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Factory default: 192.168.0.200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label5">
+   <property name="geometry">
+    <rect>
+     <x>356</x>
+     <y>95</y>
+     <width>173</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>My own default: 192.168.24.212</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label6">
+   <property name="geometry">
+    <rect>
+     <x>17</x>
+     <y>224</y>
+     <width>480</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Press Return after changing a value.</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label7">
+   <property name="geometry">
+    <rect>
+     <x>17</x>
+     <y>239</y>
+     <width>480</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>New values are used the next time the program connects to the Lenz interface(s).</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label8">
+   <property name="geometry">
+    <rect>
+     <x>17</x>
+     <y>254</y>
+     <width>480</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>If the program is already connected, restart it to use the new values.</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ipAddressForReceiving">
+   <property name="geometry">
+    <rect>
+     <x>359</x>
+     <y>125</y>
+     <width>241</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string />
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label9">
+   <property name="geometry">
+    <rect>
+     <x>356</x>
+     <y>155</y>
+     <width>173</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>May be same as for sending</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label10">
+   <property name="geometry">
+    <rect>
+     <x>356</x>
+     <y>169</y>
+     <width>173</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>My own default: 192.168.24.213</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="receivingIsActive">
+   <property name="geometry">
+    <rect>
+     <x>618</x>
+     <y>127</y>
+     <width>64</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Active</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources />
+ <connections />
+</ui>

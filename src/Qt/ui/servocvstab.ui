@@ -1,0 +1,1074 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui version="4.0">
+ <class>ServoCvsTab</class>
+ <widget class="QWidget" name="ServoCvsTab">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>825</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <widget class="QLabel" name="label1">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>40</y>
+     <width>95</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Servo</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="popupServoCvs">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>37</y>
+     <width>110</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Servo 1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Servo 2</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Servo 3</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Servo 4</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Servo 5</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Servo 6</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QGroupBox" name="groupBox2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>245</width>
+     <height>390</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Curves</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <widget class="QLabel" name="label3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>64</y>
+      <width>70</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CurveA</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="CenteredComboBox" name="comboCurveA">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>60</y>
+      <width>110</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>lin_A</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>lin_B</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>move_A</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>move_B</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>sine_A</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>sine_B</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>whip_A</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>whip_B</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>sig_hp0</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>sig_hp1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>hp1p</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>sine_AB</string>
+     </property>
+    </item>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkCurveAReverse">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>94</y>
+      <width>120</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reverse</string>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>144</y>
+      <width>70</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CurveB</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="CenteredComboBox" name="comboCurveB">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>140</y>
+      <width>110</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Symmetric</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>lin_B</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>move_A</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>move_B</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>sine_A</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>sine_B</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>whip_A</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>whip_B</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>sig_hp0</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>sig_hp1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>hp1p</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>sine_AB</string>
+     </property>
+    </item>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkCurveBReverse">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>174</y>
+      <width>120</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reverse</string>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox5">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>100</y>
+     <width>245</width>
+     <height>390</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Servo</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <widget class="QLabel" name="label6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>64</y>
+      <width>110</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>InvertServoDir</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="CenteredComboBox" name="comboInvertServoDir">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>60</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>No</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Yes</string>
+     </property>
+    </item>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>104</y>
+      <width>110</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>InvertRelais</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="CenteredComboBox" name="comboInvertRelais">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>100</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>No</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Yes</string>
+     </property>
+    </item>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>144</y>
+      <width>110</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ServoType</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="CenteredComboBox" name="comboServoType">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>168</y>
+      <width>220</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Generic</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Uhlenbrock 81420 / Weinert</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>MBTronic</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>SG90 Tower Pro</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>SG90 TZT</string>
+     </property>
+    </item>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox9">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>100</y>
+     <width>275</width>
+     <height>390</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Pulse / Power</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <widget class="QLabel" name="label10">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>54</y>
+      <width>128</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PulseStartUpValue</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="CenteredComboBox" name="comboPulseStartUpValue">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>50</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Low</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>High</string>
+     </property>
+    </item>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label11">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>92</y>
+      <width>128</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PowerStartUpDelay</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="fieldPowerStartUpDelay">
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::NoButtons</enum>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>88</y>
+      <width>50</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label12">
+    <property name="geometry">
+     <rect>
+      <x>195</x>
+      <y>92</y>
+      <width>60</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>x 20ms</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label13">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>130</y>
+      <width>128</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>IdlePulseDefault</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="CenteredComboBox" name="comboIdlePulseDefault">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>126</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Low</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>High</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Pulses</string>
+     </property>
+    </item>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label14">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>168</y>
+      <width>128</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PulseOnBefore</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="fieldPulseOnBefore">
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::NoButtons</enum>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>164</y>
+      <width>50</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label15">
+    <property name="geometry">
+     <rect>
+      <x>195</x>
+      <y>168</y>
+      <width>60</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>x 20ms</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label16">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>206</y>
+      <width>128</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PulseOffAfter</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="fieldPulseOffAfter">
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::NoButtons</enum>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>202</y>
+      <width>50</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label17">
+    <property name="geometry">
+     <rect>
+      <x>195</x>
+      <y>206</y>
+      <width>60</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>x 20ms</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label18">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>244</y>
+      <width>128</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PowerWhenIdle</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="CenteredComboBox" name="comboPowerWhenIdle">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>240</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>No</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Yes</string>
+     </property>
+    </item>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label19">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>282</y>
+      <width>128</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PowerOnBefore</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="fieldPowerOnBefore">
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::NoButtons</enum>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>278</y>
+      <width>50</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label20">
+    <property name="geometry">
+     <rect>
+      <x>195</x>
+      <y>282</y>
+      <width>60</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>x 20ms</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label21">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>320</y>
+      <width>128</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PowerOffAfter</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="fieldPowerOffAfter">
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::NoButtons</enum>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>316</y>
+      <width>50</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label22">
+    <property name="geometry">
+     <rect>
+      <x>195</x>
+      <y>320</y>
+      <width>60</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>x 20ms</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="buttonServoCvsTabDefaults">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>508</y>
+     <width>104</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>DEFAULTS</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonServoCvsTabGet">
+   <property name="geometry">
+    <rect>
+     <x>666</x>
+     <y>508</y>
+     <width>65</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>GET</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonServoCvsTabSet">
+   <property name="geometry">
+    <rect>
+     <x>752</x>
+     <y>508</y>
+     <width>63</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>SET</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CenteredComboBox</class>
+   <extends>QComboBox</extends>
+   <header>CenteredComboBox.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources />
+ <connections />
+</ui>

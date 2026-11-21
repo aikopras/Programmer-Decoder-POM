@@ -1,0 +1,383 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui version="4.0">
+ <class>LiftTab</class>
+ <widget class="QWidget" name="LiftTab">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>825</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <widget class="QLabel" name="label1">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>51</y>
+     <width>95</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>StartHoming</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="CenteredComboBox" name="comboStartHoming">
+   <property name="geometry">
+    <rect>
+     <x>132</x>
+     <y>47</y>
+     <width>107</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>No</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Yes</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QGroupBox" name="groupBox2">
+   <property name="geometry">
+    <rect>
+     <x>283</x>
+     <y>35</y>
+     <width>500</width>
+     <height>83</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>StartHoming:</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <widget class="QLabel" name="label3">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>21</y>
+      <width>478</width>
+      <height>58</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CV33: If Yes, the decoder performs a homing cycle at start-up, so the lift moves to a defined position. Takes effect after a restart of the decoder (default = Yes)</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label4">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>146</y>
+     <width>95</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>IR_Detect</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="CenteredComboBox" name="comboIrDetect">
+   <property name="geometry">
+    <rect>
+     <x>132</x>
+     <y>142</y>
+     <width>107</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>No</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Yes</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QGroupBox" name="groupBox5">
+   <property name="geometry">
+    <rect>
+     <x>283</x>
+     <y>130</y>
+     <width>500</width>
+     <height>78</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>IR_Detect:</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <widget class="QLabel" name="label6">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>21</y>
+      <width>478</width>
+      <height>53</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CV34: If Yes, the IR-sensors are checked before the lift starts moving. If a train blocks an IR-beam, the lift will not move (default = Yes)</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label7">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>241</y>
+     <width>95</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>LCD_Display</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="CenteredComboBox" name="comboLcdDisplay">
+   <property name="geometry">
+    <rect>
+     <x>132</x>
+     <y>237</y>
+     <width>107</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>No</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Yes</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QGroupBox" name="groupBox8">
+   <property name="geometry">
+    <rect>
+     <x>283</x>
+     <y>225</y>
+     <width>500</width>
+     <height>78</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>LCD_Display:</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <widget class="QLabel" name="label9">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>21</y>
+      <width>478</width>
+      <height>53</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CV35: If Yes, the LCD display is used. Since writing to the LCD is slow, it may interfere with RS-Bus feedback and other time critical functions (default = No)</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label10">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>336</y>
+     <width>95</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Serial_Line</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="CenteredComboBox" name="comboSerialLine">
+   <property name="geometry">
+    <rect>
+     <x>132</x>
+     <y>332</y>
+     <width>107</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Off</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>On</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Details</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QGroupBox" name="groupBox11">
+   <property name="geometry">
+    <rect>
+     <x>283</x>
+     <y>320</y>
+     <width>500</width>
+     <height>83</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Serial_Line:</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <widget class="QLabel" name="label12">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>21</y>
+      <width>478</width>
+      <height>58</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CV36: Serial monitor interface. On: serial input is copied to GRBL and the lift position is shown. Details: all GRBL output is shown as well. Switching on takes effect after a restart (default = Off)</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="buttonLiftTabDefaults">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>508</y>
+     <width>104</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>DEFAULTS</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonLiftTabGet">
+   <property name="geometry">
+    <rect>
+     <x>666</x>
+     <y>508</y>
+     <width>65</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>GET</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonLiftTabSet">
+   <property name="geometry">
+    <rect>
+     <x>752</x>
+     <y>508</y>
+     <width>63</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>SET</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CenteredComboBox</class>
+   <extends>QComboBox</extends>
+   <header>CenteredComboBox.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources />
+ <connections />
+</ui>

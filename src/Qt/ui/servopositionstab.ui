@@ -1,0 +1,505 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui version="4.0">
+ <class>ServoPositionsTab</class>
+ <widget class="QWidget" name="ServoPositionsTab">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>825</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <widget class="QLabel" name="label1">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>40</y>
+     <width>95</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Servo</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="popupServoPositions">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>37</y>
+     <width>110</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Servo 1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Servo 2</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Servo 3</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Servo 4</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Servo 5</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Servo 6</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QRadioButton" name="radioServoMin">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>104</y>
+     <width>75</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Min</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QSlider" name="sliderServoMin">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>103</y>
+     <width>520</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="minimum">
+    <number>544</number>
+   </property>
+   <property name="maximum">
+    <number>2400</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="fieldServoMin">
+   <property name="geometry">
+    <rect>
+     <x>635</x>
+     <y>101</y>
+     <width>70</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>544</number>
+   </property>
+   <property name="maximum">
+    <number>2400</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label2">
+   <property name="geometry">
+    <rect>
+     <x>737</x>
+     <y>105</y>
+     <width>80</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>µs</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label3">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>125</y>
+     <width>60</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>544</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label4">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>125</y>
+     <width>60</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>2400</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioServoMax">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>184</y>
+     <width>75</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Max</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="sliderServoMax">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>183</y>
+     <width>520</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="minimum">
+    <number>544</number>
+   </property>
+   <property name="maximum">
+    <number>2400</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="fieldServoMax">
+   <property name="geometry">
+    <rect>
+     <x>635</x>
+     <y>181</y>
+     <width>70</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>544</number>
+   </property>
+   <property name="maximum">
+    <number>2400</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label5">
+   <property name="geometry">
+    <rect>
+     <x>737</x>
+     <y>185</y>
+     <width>80</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>µs</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label6">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>205</y>
+     <width>60</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>544</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label7">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>205</y>
+     <width>60</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>2400</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioServoSpeed">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>264</y>
+     <width>75</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Speed</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="sliderServoSpeed">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>263</y>
+     <width>520</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>50</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="fieldServoSpeed">
+   <property name="geometry">
+    <rect>
+     <x>635</x>
+     <y>261</y>
+     <width>70</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>50</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label8">
+   <property name="geometry">
+    <rect>
+     <x>737</x>
+     <y>265</y>
+     <width>80</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>x time</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label9">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>285</y>
+     <width>60</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label10">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>285</y>
+     <width>60</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>50</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="textServoStatus">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>320</y>
+     <width>600</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Not active</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox11">
+   <property name="geometry">
+    <rect>
+     <x>12</x>
+     <y>372</y>
+     <width>570</width>
+     <height>119</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Live setting:</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <widget class="QLabel" name="label12">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>21</y>
+      <width>548</width>
+      <height>94</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>START selects the servo. Choose Min, Max or Speed.
+Every change is written into the decoder directly and shown by the servo.
+
+DONE ends the setting, CANCEL restores the values read before START.
+MIDDLE sets the servo to 1500 µs; DEFAULTS restores the decoder defaults.</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="buttonServoStart">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>508</y>
+     <width>104</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>START</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonServoMiddle">
+   <property name="geometry">
+    <rect>
+     <x>125</x>
+     <y>508</y>
+     <width>104</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>MIDDLE</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonServoDefaults">
+   <property name="geometry">
+    <rect>
+     <x>239</x>
+     <y>508</y>
+     <width>104</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>DEFAULTS</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonServoCancel">
+   <property name="geometry">
+    <rect>
+     <x>621</x>
+     <y>508</y>
+     <width>94</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>CANCEL</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonServoDone">
+   <property name="geometry">
+    <rect>
+     <x>721</x>
+     <y>508</y>
+     <width>94</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>DONE</string>
+   </property>
+  </widget>
+ </widget>
+ <resources />
+ <connections />
+</ui>

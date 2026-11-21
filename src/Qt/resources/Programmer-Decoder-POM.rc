@@ -1,0 +1,2 @@
+// Windows resource file: the icon of the program (shown in the Explorer and the task bar)
+IDI_ICON1 ICON "PoM-Decoder-icon.ico"
